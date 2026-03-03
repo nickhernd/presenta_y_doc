@@ -1,0 +1,148 @@
+%==============================================================================
+% 3D Gaussian Splatting: Mathematical Foundations and Pipeline
+% A Comparative Study with Neural Radiance Fields
+%==============================================================================
+\documentclass[12pt,a4paper]{article}
+
+%--- Encoding & Language --------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+%--- Mathematics ----------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+
+%--- Graphics & Tables ----------------------------------------------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+%--- Algorithms -----------------------------------------------------------
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+%--- Layout & Style -------------------------------------------------------
+\usepackage[
+  top=2.5cm, bottom=2.5cm,
+  left=3cm,  right=3cm
+]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems, skins, breakable}
+
+%--- Hyperlinks -----------------------------------------------------------
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=green!50!black,
+  urlcolor=blue!60!black
+]{hyperref}
+\usepackage{cleveref}
+
+%--- References -----------------------------------------------------------
+\usepackage{cite}
+
+%==============================================================================
+% Custom Math Commands
+%==============================================================================
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cov}{\boldsymbol{\Sigma}}
+\newcommand{\mean}{\boldsymbol{\mu}}
+\newcommand{\rot}{\mathbf{R}}
+\newcommand{\scale}{\mathbf{S}}
+\newcommand{\quat}{\mathbf{q}}
+\newcommand{\transp}{^\top}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+%--- TColorBox Environments -----------------------------------------------
+\newtcolorbox{definitionbox}[1]{
+  colback=blue!5!white, colframe=blue!50!black,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced
+}
+\newtcolorbox{keybox}[1]{
+  colback=green!5!white, colframe=green!50!black,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced
+}
+\newtcolorbox{notebox}{
+  colback=orange!5!white, colframe=orange!60!black,
+  fonttitle=\bfseries, title={Note},
+  breakable, enhanced
+}
+
+%==============================================================================
+% Header / Footer
+%==============================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small 3D Gaussian Splatting: Mathematical Foundations}
+\lhead{\small VAR -- Computer Vision and Robotics}
+\rfoot{\thepage}
+\setlength{\headheight}{14.5pt}
+
+%==============================================================================
+% Document
+%==============================================================================
+\begin{document}
+
+%--- Title Page ---------------------------------------------------------------
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Large\bfseries University of Alicante\par}
+  {\large Department of Computer Science and Artificial Intelligence\par}
+  \vspace{0.5cm}
+  {\large Computer Engineering -- Specialisation in Computing\par}
+  {\large VAR: Computer Vision and Robotics\par}
+  \vspace{3cm}
+  \rule{\linewidth}{0.4pt}\\[0.4cm]
+  {\Huge\bfseries 3D Gaussian Splatting\par}
+  {\Large Mathematical Foundations and Rendering Pipeline\par}
+  \vspace{0.2cm}
+  \rule{\linewidth}{0.4pt}\\[1cm]
+  {\large\itshape A Comparative Study with Neural Radiance Fields\par}
+  \vfill
+  \begin{tabular}{rl}
+    \textbf{Author:}   & [Author Name] \\
+    \textbf{Date:}     & March 2026    \\
+  \end{tabular}
+  \vspace{2cm}
+\end{titlepage}
+
+%--- Table of Contents --------------------------------------------------------
+\tableofcontents
+\newpage
+
+%==============================================================================
+% Sections
+%==============================================================================
+\input{sections/01_introduction}
+\input{sections/02_gaussian_representation}
+\input{sections/03_covariance_factorization}
+\input{sections/04_spherical_harmonics}
+\input{sections/05_2d_projection}
+\input{sections/06_rasterization_pipeline}
+\input{sections/07_alpha_blending}
+\input{sections/08_optimization}
+
+%==============================================================================
+% Bibliography
+%==============================================================================
+\newpage
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

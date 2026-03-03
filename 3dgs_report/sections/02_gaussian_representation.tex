@@ -1,0 +1,70 @@
+%==============================================================================
+% Section 2 -- Mathematical Representation of 3D Gaussians
+%==============================================================================
+\section{Mathematical Representation of 3D Gaussians}
+\label{sec:gaussian_repr}
+
+\subsection{The 3D Gaussian Kernel}
+
+A 3D Gaussian is defined by its unnormalised influence kernel:
+\begin{equation}
+  \boxed{
+    \Gcal(\mathbf{x}\,;\,\mean,\cov)
+    = \exp\!\left(-\frac{1}{2}(\mathbf{x}-\mean)\transp \cov^{-1} (\mathbf{x}-\mean)\right)
+  }
+  \label{eq:gaussian_kernel}
+\end{equation}
+where $\mean \in \R^3$ is the centre and $\cov \in \R^{3\times 3}$ is a
+symmetric positive semi-definite (SPSD) covariance matrix. The kernel equals 1
+at $\mathbf{x}=\mean$ and decays with the Mahalanobis distance; the locus
+$\Gcal = e^{-1/2}$ traces the \emph{one-sigma ellipsoid}.
+
+%------------------------------------------------------------------------------
+\subsection{Gaussian Primitive}
+
+\begin{definitionbox}{Gaussian Primitive}
+Each primitive $\Gcal_i$ is an oriented, anisotropic ellipsoid characterised by:
+\begin{itemize}
+  \item $\mean_i \in \R^3$ -- \textbf{position},
+  \item $\cov_i \in \R^{3\times 3}$ -- \textbf{shape and orientation}
+        (eigenvalues = squared semi-axis lengths; eigenvectors = principal axes),
+  \item $o_i \in [0,1]$ -- \textbf{opacity},
+  \item $\mathbf{f}_i \in \R^{(L+1)^2 \times 3}$ -- \textbf{colour} as SH
+        coefficients (Section~\ref{sec:sh}).
+\end{itemize}
+\end{definitionbox}
+
+%------------------------------------------------------------------------------
+\subsection{Why Gaussians?}
+
+\begin{keybox}{Desirable Properties}
+\begin{enumerate}
+  \item \textbf{Differentiability}: infinitely differentiable w.r.t.\ all
+        parameters, enabling gradient-based optimisation.
+  \item \textbf{Closed-form projection}: a 3D Gaussian projects to a 2D
+        Gaussian under a perspective camera (Section~\ref{sec:projection}).
+  \item \textbf{Soft boundaries}: smooth fall-off models translucent or fuzzy
+        regions (hair, smoke) without hard silhouettes.
+  \item \textbf{Efficient rasterisation}: 2D splats are rendered in a single
+        GPU forward pass via a tile-based rasteriser.
+\end{enumerate}
+\end{keybox}
+
+%------------------------------------------------------------------------------
+\subsection{Scene Representation and Parameter Count}
+
+A scene is a finite mixture of $N$ primitives:
+\begin{equation}
+  \mathcal{S} = \bigl\{ (\mean_i,\, \cov_i,\, o_i,\, \mathbf{f}_i) \bigr\}_{i=1}^{N}
+\end{equation}
+
+Typical scenes contain $N \in [10^5, 10^7]$ Gaussians stored as flat GPU
+tensors. For SH degree $L=3$ each Gaussian has 59 learnable parameters
+($3 + 4 + 3 + 1 + 48$), so $3\times10^6$ Gaussians require $\approx700$ MB in
+\texttt{float32}.
+
+\begin{notebox}
+  Directly optimising the 9 entries of $\cov$ does not guarantee SPSD. 3DGS
+  instead parametrises $\cov$ through a factorisation that enforces this
+  constraint by construction (Section~\ref{sec:covariance}).
+\end{notebox}

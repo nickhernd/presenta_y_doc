@@ -1,0 +1,71 @@
+%==============================================================================
+% Section 3 -- Covariance Factorisation and Rotation
+%==============================================================================
+\section{Covariance Factorisation and Rotation}
+\label{sec:covariance}
+
+\subsection{The RS Factorisation}
+
+To guarantee SPSD throughout optimisation, 3DGS parametrises $\cov$ as:
+\begin{equation}
+  \boxed{
+    \cov = \rot\,\scale\,\scale\transp\rot\transp
+  }
+  \label{eq:cov_factorization}
+\end{equation}
+where $\rot \in SO(3)$ is a rotation matrix and
+$\scale = \operatorname{diag}(s_1, s_2, s_3)$ with $s_k > 0$.
+SPSD is guaranteed since $\mathbf{v}\transp\cov\,\mathbf{v} =
+\|\scale\transp\rot\transp\mathbf{v}\|^2 \geq 0$ for all $\mathbf{v}$.
+Expanded:
+\begin{equation}
+  \cov = \rot
+  \begin{pmatrix} s_1^2 & 0 & 0 \\ 0 & s_2^2 & 0 \\ 0 & 0 & s_3^2 \end{pmatrix}
+  \rot\transp
+\end{equation}
+The columns of $\rot$ are the eigenvectors of $\cov$ and $s_k^2$ are the
+eigenvalues, so $s_k$ are the principal semi-axis lengths.
+
+%------------------------------------------------------------------------------
+\subsection{Quaternion Representation of Rotation}
+\label{ssec:quaternion}
+
+$\rot$ is stored as a unit quaternion $\quat = (q_w, q_x, q_y, q_z)$,
+$\|\quat\|=1$, which uses only 4 parameters and avoids gimbal lock:
+\begin{equation}
+  \rot(\quat) =
+  \begin{pmatrix}
+    1 - 2(q_y^2 + q_z^2) & 2(q_xq_y - q_wq_z)  & 2(q_xq_z + q_wq_y) \\
+    2(q_xq_y + q_wq_z)   & 1 - 2(q_x^2 + q_z^2) & 2(q_yq_z - q_wq_x) \\
+    2(q_xq_z - q_wq_y)   & 2(q_yq_z + q_wq_x)   & 1 - 2(q_x^2 + q_y^2)
+  \end{pmatrix}
+\end{equation}
+After each gradient step $\quat$ is renormalised: $\quat \leftarrow \quat/\|\quat\|$.
+
+%------------------------------------------------------------------------------
+\subsection{Scale Parametrisation}
+
+Scales are stored as $\hat{s}_k = \log s_k \in \R$ (unconstrained) and
+recovered as $s_k = \exp(\hat{s}_k)$, ensuring $s_k > 0$ without constrained
+optimisation. Opacity is handled analogously via logit space.
+
+%------------------------------------------------------------------------------
+\subsection{Summary}
+
+\begin{table}[H]
+  \centering
+  \caption{Learnable parameters per Gaussian primitive.}
+  \label{tab:params}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{llll}
+    \toprule
+    \textbf{Attribute} & \textbf{Symbol} & \textbf{Dim.} & \textbf{Constraint} \\
+    \midrule
+    Position        & $\mean$               & 3          & $\R^3$ \\
+    Rotation        & $\quat$               & 4          & $\|\quat\|=1$ \\
+    Scale (log)     & $\hat{\mathbf{s}}$    & 3          & $\R^3$ \\
+    Opacity (logit) & $\hat{o}$             & 1          & $\sigma(\hat{o})\in(0,1)$ \\
+    SH coefficients & $\mathbf{f}$          & $3(L+1)^2$ & $\R$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}

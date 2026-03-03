@@ -1,0 +1,58 @@
+%==============================================================================
+% Section 4 -- Colour Modelling with Spherical Harmonics
+%==============================================================================
+\section{Colour Modelling via Spherical Harmonics}
+\label{sec:sh}
+
+\subsection{Motivation}
+
+Surfaces exhibit view-dependent appearance (specular highlights, metallic
+reflections). In 3DGS each Gaussian encodes its view-dependent colour compactly
+using \textbf{spherical harmonics (SH)}, an orthonormal basis on the unit
+sphere $S^2$:
+\begin{equation}
+  \int_{S^2} Y_l^m(\mathbf{d})\, Y_{l'}^{m'}(\mathbf{d})\, \mathrm{d}\mathbf{d}
+  = \delta_{ll'}\,\delta_{mm'}
+\end{equation}
+Low-degree terms capture diffuse colour; higher degrees encode specular effects.
+
+%------------------------------------------------------------------------------
+\subsection{View-Dependent Colour}
+
+For Gaussian $\Gcal_i$ and channel $k \in \{R,G,B\}$, the colour in direction
+$\mathbf{d}$ is:
+\begin{equation}
+  \boxed{
+    c_{i,k}(\mathbf{d}) = \sum_{l=0}^{L} \sum_{m=-l}^{l}
+      f_{i,k,l}^m\, Y_l^m(\mathbf{d})
+  }
+  \label{eq:sh_color}
+\end{equation}
+where $f_{i,k,l}^m$ are learned coefficients. In matrix form:
+$\mathbf{c}_i(\mathbf{d}) = \mathbf{F}_i\,\mathbf{y}(\mathbf{d})$,
+with $\mathbf{y}(\mathbf{d}) \in \R^{(L+1)^2}$ the vector of SH values.
+SH evaluation is purely polynomial, making it very efficient on the GPU.
+
+%------------------------------------------------------------------------------
+\subsection{Degree Selection}
+
+\begin{table}[H]
+  \centering
+  \caption{SH parameter count by degree.}
+  \label{tab:sh_count}
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{cccc}
+    \toprule
+    \textbf{Max Degree $L$} & \textbf{Coeffs/channel} & \textbf{Total (RGB)} & \textbf{Effect} \\
+    \midrule
+    0 & 1  & 3  & Constant diffuse \\
+    1 & 4  & 12 & Linear shading \\
+    2 & 9  & 27 & Quadratic specular \\
+    3 & 16 & 48 & Sharp specular (used in 3DGS) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The original 3DGS paper uses $L=3$. Training starts at $L=0$ and unlocks one
+degree every 1000 iterations, stabilising early optimisation by fitting
+low-frequency geometry first.

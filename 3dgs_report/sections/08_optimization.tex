@@ -1,0 +1,83 @@
+%==============================================================================
+% Section 8 -- Optimisation: Densification, Pruning, and Opacity
+%==============================================================================
+\section{Optimisation Mechanisms: Densification, Pruning, and Opacity}
+\label{sec:optimization}
+
+\subsection{Training Objective}
+
+All parameters are optimised end-to-end by minimising:
+\begin{equation}
+  \boxed{
+    \mathcal{L} = (1 - \lambda)\,\mathcal{L}_1 + \lambda\,\mathcal{L}_{\text{D-SSIM}}
+  }, \quad \lambda = 0.2
+\end{equation}
+$\mathcal{L}_1$ ensures per-pixel accuracy; $\mathcal{L}_{\text{D-SSIM}}$
+preserves structural detail by penalising blurry renderings.
+
+%------------------------------------------------------------------------------
+\subsection{Optimiser}
+
+Adam with per-group learning rates (position: $1.6\times10^{-4}$ decaying to
+$1.6\times10^{-6}$; scale: $5\times10^{-3}$; rotation: $10^{-3}$; opacity:
+$5\times10^{-2}$; SH degree 0: $2.5\times10^{-3}$; SH 1--3:
+$2.5\times10^{-4}$).
+
+%------------------------------------------------------------------------------
+\subsection{Adaptive Density Control}
+\label{ssec:density}
+
+Every 100 iterations (from iter.\ 500 to 15\,000), the mean position gradient
+\begin{equation}
+  \bar{\nabla}_i = \tfrac{1}{K}\sum_{k=1}^{K}\|\nabla_{\mean'_i}\mathcal{L}\|
+\end{equation}
+drives two operations when $\bar{\nabla}_i > \tau_{\text{grad}} = 2\times10^{-4}$:
+
+\begin{itemize}
+  \item \textbf{Clone} (small Gaussian, $\max s_k < \tau_{\text{size}}$): create
+        an exact copy; both are optimised independently. The region needs more
+        primitives.
+  \item \textbf{Split} (large Gaussian, $\max s_k \geq \tau_{\text{size}}$):
+        replace with two Gaussians at scale $s_k/1.6$, positions sampled from
+        $\mathcal{N}(\mean_i, \cov_i)$. The primitive covers too large an area.
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Pruning}
+
+At the same frequency, Gaussians are removed if: (1) opacity
+$o_i < \epsilon_\alpha = 0.005$, (2) world-space size exceeds $\tau_w$, or
+(3) projected 2D radius exceeds $\tau_v$ (removes ``floaters'').
+
+%------------------------------------------------------------------------------
+\subsection{Periodic Opacity Reset}
+
+Every 3000 iterations all opacities are reset to $\alpha_{\min} \approx 0.01$.
+Gaussians that contribute to the scene recover high opacity quickly; redundant
+ones do not and are pruned at the next pruning step. This prevents ghost
+Gaussians from accumulating throughout training.
+
+%------------------------------------------------------------------------------
+\subsection{Training Schedule and Convergence}
+
+\begin{algorithm}[H]
+  \caption{3DGS Training Schedule (30\,000 iterations)}
+  \label{alg:training}
+  \begin{algorithmic}[1]
+    \Require{Images $\{I_k\}$, SfM point cloud $\mathcal{P}$}
+    \State Initialise small isotropic Gaussians from $\mathcal{P}$
+    \For{$t = 1, \ldots, 30000$}
+      \State Render $\hat{I}$; compute $\mathcal{L}$; Adam step
+      \If{$500 \leq t \leq 15000$ and $t \bmod 100 = 0$}
+        \State Clone/split high-gradient Gaussians; prune low-opacity/large ones
+      \EndIf
+      \If{$t \bmod 3000 = 0$} Reset opacities to $\alpha_{\min}$ \EndIf
+      \If{$t \bmod 1000 = 0$ and $t \leq 3000$} Unlock next SH degree \EndIf
+    \EndFor
+  \end{algorithmic}
+\end{algorithm}
+
+A typical run starts with $\sim10^4$--$10^5$ Gaussians, peaks at
+$\sim3\times10^6$--$6\times10^6$, and stabilises at
+$\sim10^6$--$4\times10^6$. Training takes 20--45 min on an RTX 3090/4090;
+at convergence rendering exceeds 90 fps at $1920\times1080$.

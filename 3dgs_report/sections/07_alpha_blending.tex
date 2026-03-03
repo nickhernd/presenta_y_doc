@@ -1,0 +1,71 @@
+%==============================================================================
+% Section 7 -- Alpha Blending and Accumulation Rendering
+%==============================================================================
+\section{Alpha Blending and Accumulation Rendering}
+\label{sec:alpha_blending}
+
+\subsection{Alpha Compositing}
+
+Given $N$ colour contributions $\{c_i\}$ with opacities $\{\alpha_i\}$ sorted
+front-to-back, the final pixel colour is:
+\begin{equation}
+  \boxed{
+    C = \sum_{i=1}^{N} c_i\,\alpha_i\,T_i
+  }, \qquad
+  T_i = \prod_{j=1}^{i-1}(1 - \alpha_j), \quad T_1 = 1
+  \label{eq:alpha_blend}
+\end{equation}
+$T_i$ is the transmittance reaching layer $i$; $\alpha_i T_i$ is its effective
+contribution.
+
+%------------------------------------------------------------------------------
+\subsection{Per-Gaussian Opacity at a Pixel}
+
+The opacity of Gaussian $\Gcal_i$ at pixel $\mathbf{u}$ combines the learned
+opacity $o_i$ and the 2D kernel response:
+\begin{equation}
+  \boxed{
+    \alpha_i(\mathbf{u}) = o_i \cdot
+      \exp\!\left(
+        -\tfrac{1}{2}(\mathbf{u} - \mean'_i)\transp(\cov'_i)^{-1}(\mathbf{u} - \mean'_i)
+      \right)
+  }
+  \label{eq:per_gaussian_alpha}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Incremental Accumulation}
+
+\begin{algorithm}[H]
+  \caption{Alpha Blending per Pixel (front-to-back)}
+  \label{alg:alpha_blend}
+  \begin{algorithmic}[1]
+    \Require{Sorted Gaussians $\{i_1, \ldots, i_K\}$ covering pixel $\mathbf{u}$}
+    \Ensure{Pixel colour $C(\mathbf{u})$}
+    \State $C \leftarrow \mathbf{0}$, \quad $T \leftarrow 1$
+    \For{$k = 1, \ldots, K$}
+      \State $\alpha \leftarrow \alpha_{i_k}(\mathbf{u})$
+      \If{$\alpha < \epsilon_{\min}$} \textbf{continue} \EndIf
+      \State $C \leftarrow C + \mathbf{c}_{i_k} \cdot \alpha \cdot T$; \quad
+             $T \leftarrow T \cdot (1 - \alpha)$
+      \If{$T < \epsilon_{\text{stop}}$} \textbf{break} \EndIf
+    \EndFor
+    \State \Return{$C + T \cdot C_{\text{bg}}$}
+  \end{algorithmic}
+\end{algorithm}
+
+$\epsilon_{\min} = \epsilon_{\text{stop}} = 10^{-4}$. Depth and opacity maps
+are obtained by the same accumulation replacing $\mathbf{c}_i$ with $z_i$ or 1:
+\begin{equation}
+  D(\mathbf{u}) = \sum_i z_i\,\alpha_i\,T_i, \qquad
+  A(\mathbf{u}) = 1 - T_{\text{final}}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Connection to NeRF Volume Rendering}
+
+The 3DGS formula is the discrete equivalent of the NeRF volume integral.
+Identifying $\alpha_i = 1 - e^{-\sigma_i\delta_i}$ and
+$T_i = \prod_{j<i}e^{-\sigma_j\delta_j}$ recovers Eq.~\eqref{eq:alpha_blend}
+exactly. The two methods differ only in \emph{how} $\alpha_i$ is produced, not
+in the compositing formula.
