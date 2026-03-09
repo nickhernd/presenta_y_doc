@@ -56,28 +56,3 @@ Every 3000 iterations all opacities are reset to $\alpha_{\min} \approx 0.01$.
 Gaussians that contribute to the scene recover high opacity quickly; redundant
 ones do not and are pruned at the next pruning step. This prevents ghost
 Gaussians from accumulating throughout training.
-
-%------------------------------------------------------------------------------
-\subsection{Training Schedule and Convergence}
-
-\begin{algorithm}[H]
-  \caption{3DGS Training Schedule (30\,000 iterations)}
-  \label{alg:training}
-  \begin{algorithmic}[1]
-    \Require{Images $\{I_k\}$, SfM point cloud $\mathcal{P}$}
-    \State Initialise small isotropic Gaussians from $\mathcal{P}$
-    \For{$t = 1, \ldots, 30000$}
-      \State Render $\hat{I}$; compute $\mathcal{L}$; Adam step
-      \If{$500 \leq t \leq 15000$ and $t \bmod 100 = 0$}
-        \State Clone/split high-gradient Gaussians; prune low-opacity/large ones
-      \EndIf
-      \If{$t \bmod 3000 = 0$} Reset opacities to $\alpha_{\min}$ \EndIf
-      \If{$t \bmod 1000 = 0$ and $t \leq 3000$} Unlock next SH degree \EndIf
-    \EndFor
-  \end{algorithmic}
-\end{algorithm}
-
-A typical run starts with $\sim10^4$--$10^5$ Gaussians, peaks at
-$\sim3\times10^6$--$6\times10^6$, and stabilises at
-$\sim10^6$--$4\times10^6$. Training takes 20--45 min on an RTX 3090/4090;
-at convergence rendering exceeds 90 fps at $1920\times1080$.

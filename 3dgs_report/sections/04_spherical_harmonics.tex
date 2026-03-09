@@ -9,12 +9,7 @@
 Surfaces exhibit view-dependent appearance (specular highlights, metallic
 reflections). In 3DGS each Gaussian encodes its view-dependent colour compactly
 using \textbf{spherical harmonics (SH)}, an orthonormal basis on the unit
-sphere $S^2$:
-\begin{equation}
-  \int_{S^2} Y_l^m(\mathbf{d})\, Y_{l'}^{m'}(\mathbf{d})\, \mathrm{d}\mathbf{d}
-  = \delta_{ll'}\,\delta_{mm'}
-\end{equation}
-Low-degree terms capture diffuse colour; higher degrees encode specular effects.
+sphere $S^2$
 
 %------------------------------------------------------------------------------
 \subsection{View-Dependent Colour}
@@ -56,3 +51,5 @@ SH evaluation is purely polynomial, making it very efficient on the GPU.
 The original 3DGS paper uses $L=3$. Training starts at $L=0$ and unlocks one
 degree every 1000 iterations, stabilising early optimisation by fitting
 low-frequency geometry first.
+
+\newpage

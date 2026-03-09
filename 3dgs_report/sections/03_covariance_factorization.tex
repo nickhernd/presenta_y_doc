@@ -1,6 +1,7 @@
 %==============================================================================
 % Section 3 -- Covariance Factorisation and Rotation
 %==============================================================================
+\newpage
 \section{Covariance Factorisation and Rotation}
 \label{sec:covariance}
 
@@ -42,30 +43,4 @@ $\|\quat\|=1$, which uses only 4 parameters and avoids gimbal lock:
 \end{equation}
 After each gradient step $\quat$ is renormalised: $\quat \leftarrow \quat/\|\quat\|$.
 
-%------------------------------------------------------------------------------
-\subsection{Scale Parametrisation}
-
-Scales are stored as $\hat{s}_k = \log s_k \in \R$ (unconstrained) and
-recovered as $s_k = \exp(\hat{s}_k)$, ensuring $s_k > 0$ without constrained
-optimisation. Opacity is handled analogously via logit space.
-
-%------------------------------------------------------------------------------
-\subsection{Summary}
-
-\begin{table}[H]
-  \centering
-  \caption{Learnable parameters per Gaussian primitive.}
-  \label{tab:params}
-  \renewcommand{\arraystretch}{1.4}
-  \begin{tabular}{llll}
-    \toprule
-    \textbf{Attribute} & \textbf{Symbol} & \textbf{Dim.} & \textbf{Constraint} \\
-    \midrule
-    Position        & $\mean$               & 3          & $\R^3$ \\
-    Rotation        & $\quat$               & 4          & $\|\quat\|=1$ \\
-    Scale (log)     & $\hat{\mathbf{s}}$    & 3          & $\R^3$ \\
-    Opacity (logit) & $\hat{o}$             & 1          & $\sigma(\hat{o})\in(0,1)$ \\
-    SH coefficients & $\mathbf{f}$          & $3(L+1)^2$ & $\R$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+\newpage

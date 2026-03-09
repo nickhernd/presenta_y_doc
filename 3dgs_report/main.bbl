@@ -1,16 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{chen2024nerfgs}
-Yuepeng Chen, Yifan Zhang, Heng Li, Sai Bi, Zexiang Xu, and Hao Su.
-\newblock {NeRF-GS}: {NeRF}-guided {G}aussian splatting for physics-based
-  material editing.
-\newblock In {\em arXiv preprint arXiv:2312.xxxxx}, 2024.
-
-\bibitem{green2003spherical}
-Robin Green.
-\newblock {\em Spherical Harmonic Lighting: The Gritty Details}.
-\newblock Sony Computer Entertainment America, 2003.
-
 \bibitem{kerbl2023gaussian}
 Bernhard Kerbl, Georgios Kopanas, Thomas Leimk{\"u}hler, and George Drettakis.
 \newblock 3{D} {G}aussian {S}platting for real-time radiance field rendering.
@@ -23,32 +12,6 @@ Ben Mildenhall, Pratul~P. Srinivasan, Matthew Tancik, Jonathan~T. Barron, Ravi
   synthesis.
 \newblock In {\em European Conference on Computer Vision (ECCV)}, pages
   405--421. Springer, 2020.
-
-\bibitem{muller2022instant}
-Thomas M{\"u}ller, Alex Evans, Christoph Schied, and Alexander Keller.
-\newblock Instant neural graphics primitives with a multiresolution hash
-  encoding.
-\newblock {\em ACM Transactions on Graphics}, 41(4):1--15, 2022.
-
-\bibitem{schonberger2016sfm}
-Johannes~Lutz Sch{\"o}nberger and Jan-Michael Frahm.
-\newblock Structure-from-motion revisited.
-\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition (CVPR)}, pages 4104--4113, 2016.
-
-\bibitem{verbin2022ref}
-Dor Verbin, Peter Hedman, Ben Mildenhall, Todd Zickler, Jonathan~T. Barron, and
-  Pratul~P. Srinivasan.
-\newblock Ref-{NeRF}: Structured view-dependent appearance for neural radiance
-  fields.
-\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition (CVPR)}, pages 5481--5490, 2022.
-
-\bibitem{wang2004ssim}
-Zhou Wang, Alan~C. Bovik, Hamid~R. Sheikh, and Eero~P. Simoncelli.
-\newblock Image quality assessment: From error visibility to structural
-  similarity.
-\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612, 2004.
 
 \bibitem{zwicker2001ewa}
 Matthias Zwicker, Hanspeter Pfister, Jeroen van Baar, and Markus Gross.

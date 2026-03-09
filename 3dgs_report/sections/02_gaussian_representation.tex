@@ -1,6 +1,7 @@
 %==============================================================================
 % Section 2 -- Mathematical Representation of 3D Gaussians
 %==============================================================================
+\newpage
 \section{Mathematical Representation of 3D Gaussians}
 \label{sec:gaussian_repr}
 
@@ -35,22 +36,6 @@ Each primitive $\Gcal_i$ is an oriented, anisotropic ellipsoid characterised by:
 \end{definitionbox}
 
 %------------------------------------------------------------------------------
-\subsection{Why Gaussians?}
-
-\begin{keybox}{Desirable Properties}
-\begin{enumerate}
-  \item \textbf{Differentiability}: infinitely differentiable w.r.t.\ all
-        parameters, enabling gradient-based optimisation.
-  \item \textbf{Closed-form projection}: a 3D Gaussian projects to a 2D
-        Gaussian under a perspective camera (Section~\ref{sec:projection}).
-  \item \textbf{Soft boundaries}: smooth fall-off models translucent or fuzzy
-        regions (hair, smoke) without hard silhouettes.
-  \item \textbf{Efficient rasterisation}: 2D splats are rendered in a single
-        GPU forward pass via a tile-based rasteriser.
-\end{enumerate}
-\end{keybox}
-
-%------------------------------------------------------------------------------
 \subsection{Scene Representation and Parameter Count}
 
 A scene is a finite mixture of $N$ primitives:
@@ -62,9 +47,3 @@ Typical scenes contain $N \in [10^5, 10^7]$ Gaussians stored as flat GPU
 tensors. For SH degree $L=3$ each Gaussian has 59 learnable parameters
 ($3 + 4 + 3 + 1 + 48$), so $3\times10^6$ Gaussians require $\approx700$ MB in
 \texttt{float32}.
-
-\begin{notebox}
-  Directly optimising the 9 entries of $\cov$ does not guarantee SPSD. 3DGS
-  instead parametrises $\cov$ through a factorisation that enforces this
-  constraint by construction (Section~\ref{sec:covariance}).
-\end{notebox}
