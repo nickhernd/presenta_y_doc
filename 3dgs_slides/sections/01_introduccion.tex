@@ -1,0 +1,107 @@
+\section{Introducción y Motivación}
+
+\begin{frame}{Síntesis de Vistas Novedosas (NVS)}
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \textbf{Problema central:} Reconstruir una escena 3D a partir de imágenes 2D y renderizar desde cualquier punto de vista.
+      \vspace{0.5em}
+      \begin{itemize}
+        \item Reconstrucción del mundo real en 3D
+        \item Renderizado fotorealista en tiempo real
+        \item Aplicaciones: VR/AR, cine, robótica, visión por computador
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{tikzpicture}
+        \node[draw=MidnightBlue, fill=MidnightBlue!10, rounded corners, minimum width=3.5cm, minimum height=1cm] (imgs) at (0,1.5) {\small Imágenes 2D};
+        \node[draw=accentorange, fill=accentorange!10, rounded corners, minimum width=3.5cm, minimum height=1cm] (model) at (0,0) {\small Modelo 3D};
+        \node[draw=ForestGreen, fill=ForestGreen!10, rounded corners, minimum width=3.5cm, minimum height=1cm] (render) at (0,-1.5) {\small Vista Nova};
+        \draw[->, thick] (imgs) -- (model);
+        \draw[->, thick] (model) -- (render);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{NeRF: Neural Radiance Fields}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Representación implícita} mediante una red neuronal MLP:
+      \[
+        F_\theta: (\mathbf{x}, \mathbf{d}) \;\to\; (\mathbf{c},\, \sigma)
+      \]
+      \begin{itemize}
+        \item $\mathbf{x} \in \mathbb{R}^3$: posición 3D
+        \item $\mathbf{d} \in S^2$: dirección de vista
+        \item $\mathbf{c}$: color RGB emitido
+        \item $\sigma \geq 0$: densidad volumétrica
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Renderizado por ray casting:}
+      \[
+        \hat{C}(\mathbf{r}) = \int_{t_n}^{t_f} T(t)\,\sigma(\mathbf{r}(t))\,\mathbf{c}(\mathbf{r}(t),\mathbf{d})\,dt
+      \]
+      donde $T(t) = \exp\!\left(-\int_{t_n}^{t}\sigma(\mathbf{r}(s))\,ds\right)$
+      \vspace{0.5em}
+
+      \begin{alertblock}{Limitaciones}
+        \begin{itemize}
+          \item Entrenamiento: 1--2 días
+          \item Renderizado: 5--30 s/frame
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{3D Gaussian Splatting (3DGS)}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Representación explícita} mediante primitivas Gaussianas aprendibles:
+      \vspace{0.5em}
+      \begin{itemize}
+        \item Posición $\boldsymbol{\mu}_i \in \mathbb{R}^3$
+        \item Covarianza $\boldsymbol{\Sigma}_i$ (forma y orientación)
+        \item Opacidad $o_i \in [0,1]$
+        \item Color $\mathbf{f}_i$ como coeficientes de Armónicos Esféricos
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{exampleblock}{Ventajas clave}
+        \begin{itemize}
+          \item $> 90$ fps a 1080p
+          \item Entrenamiento: 20--40 min
+          \item Diferenciable de extremo a extremo
+          \item Inicialización desde nube de puntos SfM
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Comparativa: NeRF vs 3DGS}
+  \centering
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Método} & \textbf{Representación} & \textbf{Renderizado} & \textbf{FPS} & \textbf{Entrenamiento} \\
+    \midrule
+    NeRF  & Implícita (MLP) & Ray casting & $<$1--30  & 1--2 días \\
+    3DGS  & Explícita (Gaussianas) & GPU rasterización & $>$90 & 20--40 min \\
+    \bottomrule
+  \end{tabular}
+  \vspace{1em}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{alertblock}{NeRF}
+        Alta calidad · Bajo coste memoria · Lento
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{exampleblock}{3DGS}
+        Tiempo real · $\sim$1 GB/escena · Rápido
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}

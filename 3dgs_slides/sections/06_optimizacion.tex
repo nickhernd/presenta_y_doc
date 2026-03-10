@@ -1,0 +1,95 @@
+\section{Optimización y Entrenamiento}
+
+\begin{frame}{Función de Pérdida}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Objetivo de entrenamiento:}
+      \[
+        \mathcal{L} = (1-\lambda)\mathcal{L}_1 + \lambda\,\mathcal{L}_{\text{D-SSIM}}, \quad \lambda = 0.2
+      \]
+      \begin{itemize}
+        \item $\mathcal{L}_1$: precisión pixel a pixel
+        \item $\mathcal{L}_{\text{D-SSIM}}$: preserva detalle estructural
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Optimizador Adam} con tasas por grupo:
+      \small
+      \begin{tabular}{lc}
+        \toprule
+        Parámetro & LR inicial \\
+        \midrule
+        Posición $\boldsymbol{\mu}$ & $1.6\times10^{-4}$ \\
+        Escala $\mathbf{s}$ & $5\times10^{-3}$ \\
+        Rotación $\mathbf{q}$ & $10^{-3}$ \\
+        Opacidad $o$ & $5\times10^{-2}$ \\
+        SH grado 0 & $2.5\times10^{-3}$ \\
+        SH grados 1--3 & $2.5\times10^{-4}$ \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Control Adaptativo de Densidad}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Criterio de activación} (cada 100 iter, entre iter 500--15000):
+      \[
+        \bar{\nabla}_i = \frac{1}{K}\sum_k \|\nabla_{\boldsymbol{\mu}'_i}\mathcal{L}\|, \quad \bar{\nabla}_i > \tau_{\text{grad}} = 2\times10^{-4}
+      \]
+      \vspace{0.5em}
+      \begin{block}{Clonar}
+        Gaussiana \textbf{pequeña} ($\max s_k < \tau_{\text{size}}$)\\
+        $\to$ copia exacta en la misma posición
+      \end{block}
+      \begin{block}{Dividir}
+        Gaussiana \textbf{grande} ($\max s_k \geq \tau_{\text{size}}$)\\
+        $\to$ dos nuevas a escala $s_k / 1.6$
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}[scale=0.85]
+        % Gran gaussiana
+        \node[draw=MidnightBlue, fill=MidnightBlue!15, ellipse, minimum width=2.5cm, minimum height=1.2cm] (big) at (0,1.5) {\small Grande};
+        % Dos pequeñas
+        \node[draw=ForestGreen, fill=ForestGreen!15, ellipse, minimum width=1.1cm, minimum height=0.6cm] (s1) at (-1.2,-0.2) {\tiny split};
+        \node[draw=ForestGreen, fill=ForestGreen!15, ellipse, minimum width=1.1cm, minimum height=0.6cm] (s2) at (1.2,-0.2) {\tiny split};
+        \draw[->, thick] (big) -- (s1);
+        \draw[->, thick] (big) -- (s2);
+        \node[below] at (0,-0.8) {\small Dividir};
+        % Clonar
+        \node[draw=accentorange, fill=accentorange!15, ellipse, minimum width=0.9cm, minimum height=0.55cm] (sm) at (-3.5,1.5) {\tiny peq};
+        \node[draw=accentorange, fill=accentorange!15, ellipse, minimum width=0.9cm, minimum height=0.55cm] (cl) at (-3.5,0.3) {\tiny clon};
+        \draw[->, thick] (sm) -- (cl);
+        \node[below] at (-3.5,-0.2) {\small Clonar};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Poda y Reset de Opacidad}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Poda} (misma frecuencia que densificación):
+      \vspace{0.3em}
+      \begin{itemize}
+        \item Eliminar si $o_i < 0.005$
+        \item Eliminar si tamaño en mundo $> \tau_w$
+        \item Eliminar si radio 2D $> \tau_v$
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{alertblock}{Reset periódico de opacidades (cada 3000 iter)}
+        \begin{itemize}
+          \item Todas las opacidades $\leftarrow \approx 0.01$
+          \item Las Gaussianas activas se recuperan rápido
+          \item Las redundantes son podadas
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  \centering
+  \textit{Este mecanismo evita la acumulación de Gaussianas fantasma sin utilidad.}
+\end{frame}

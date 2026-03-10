@@ -1,0 +1,53 @@
+\section{Representación Gaussiana 3D}
+
+\begin{frame}{El Kernel Gaussiano 3D}
+  Cada primitiva es una Gaussiana 3D:
+  \[
+    G(\mathbf{x};\, \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \exp\!\left(-\tfrac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^\top \boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)
+  \]
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item $\boldsymbol{\mu} \in \mathbb{R}^3$: centro de la primitiva
+        \item $\boldsymbol{\Sigma} \in \mathbb{R}^{3\times3}$: covarianza simétrica positiva semidefinida
+      \end{itemize}
+      \vspace{0.5em}
+      El \textbf{elipsoide de una sigma} se da en $G = e^{-1/2}$, definiendo la extensión volumétrica.
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}[scale=0.8]
+        \draw[->] (0,0,0) -- (2,0,0) node[right] {$x$};
+        \draw[->] (0,0,0) -- (0,2,0) node[above] {$y$};
+        \draw[MidnightBlue, thick, fill=MidnightBlue!20, opacity=0.7]
+          (0,0) ellipse (1.4cm and 0.7cm);
+        \fill[accentorange] (0,0) circle (2pt) node[above right] {$\boldsymbol{\mu}$};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Primitiva Gaussiana: Parámetros Aprendibles}
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      Cada Gaussiana $i$ almacena:
+      \begin{itemize}
+        \item \textbf{Posición:} $\boldsymbol{\mu}_i \in \mathbb{R}^3$
+        \item \textbf{Covarianza:} $\boldsymbol{\Sigma}_i$ (forma y orientación)
+        \item \textbf{Opacidad:} $o_i \in [0,1]$
+        \item \textbf{Color SH:} $\mathbf{f}_i \in \mathbb{R}^{(L+1)^2 \times 3}$
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{block}{Escena completa}
+        \[
+          \mathcal{S} = \{(\boldsymbol{\mu}_i, \boldsymbol{\Sigma}_i, o_i, \mathbf{f}_i)\}_{i=1}^{N}
+        \]
+        \begin{itemize}
+          \item $N \in [10^5, 10^7]$ Gaussianas típicamente
+          \item Para $L=3$: \textbf{59 parámetros} por Gaussiana
+          \item $3\times10^6$ Gaussianas $\approx$ \textbf{700 MB} en float32
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}

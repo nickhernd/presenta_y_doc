@@ -1,0 +1,73 @@
+\section{Alpha Blending y Renderizado}
+
+\begin{frame}{Proyección 2D de las Gaussianas}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Para renderizar, cada Gaussiana 3D se proyecta a pantalla usando la \textbf{aproximación local lineal} (Zwicker et al.):
+      \[
+        \boldsymbol{\Sigma}' = \mathbf{J}\mathbf{W}\boldsymbol{\Sigma}\mathbf{W}^\top\mathbf{J}^\top
+      \]
+      \begin{itemize}
+        \item $\mathbf{W}$: transformación de vista
+        \item $\mathbf{J}$: Jacobiano de la proyección perspectiva
+        \item $\boldsymbol{\Sigma}' \in \mathbb{R}^{2\times2}$: covarianza 2D resultante
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Opacidad 2D en pixel $\mathbf{u}$:}
+      \[
+        \alpha_i(\mathbf{u}) = o_i \cdot \exp\!\left(-\tfrac{1}{2}(\mathbf{u}-\boldsymbol{\mu}'_i)^\top (\boldsymbol{\Sigma}'_i)^{-1}(\mathbf{u}-\boldsymbol{\mu}'_i)\right)
+      \]
+      Combina la opacidad aprendida $o_i$ con la respuesta del kernel 2D.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Composición Alpha (Front-to-Back)}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Color final del pixel:}
+      \[
+        \mathbf{C} = \sum_{i=1}^{N} \mathbf{c}_i\,\alpha_i\,T_i
+      \]
+      donde la \textbf{transmitancia acumulada} es:
+      \[
+        T_i = \prod_{j=1}^{i-1}(1 - \alpha_j)
+      \]
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Algoritmo incremental por pixel}
+        \begin{enumerate}
+          \item Ordenar Gaussianas por profundidad
+          \item Para cada Gaussiana $i$ de frente a fondo:
+          \begin{itemize}
+            \item Calcular $\alpha_i(\mathbf{u})$
+            \item Acumular $\mathbf{C} \mathrel{+}= \mathbf{c}_i\,\alpha_i\,T$
+            \item Actualizar $T \mathrel{\times}= (1 - \alpha_i)$
+          \end{itemize}
+          \item Parar si $T < \varepsilon_{\text{stop}} = 10^{-4}$
+        \end{enumerate}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conexión con NeRF}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      3DGS es el \textbf{equivalente discreto} de la integral volumétrica de NeRF:
+      \vspace{0.5em}
+      \begin{itemize}
+        \item NeRF: $\hat{C} = \int T(t)\,\sigma\,\mathbf{c}\;dt$
+        \item 3DGS: $\hat{C} = \sum_i T_i\,\alpha_i\,\mathbf{c}_i$
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Identificando $\alpha_i = 1 - e^{-\sigma_i \delta_i}$ se recupera exactamente la misma fórmula de NeRF.
+      \vspace{0.5em}
+      \begin{exampleblock}{Ventaja práctica}
+        La representación discreta permite rasterización eficiente en GPU en lugar de ray marching costoso.
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}

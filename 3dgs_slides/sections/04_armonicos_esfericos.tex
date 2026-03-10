@@ -1,0 +1,51 @@
+\section{Armónicos Esféricos}
+
+\begin{frame}{Color Dependiente de la Vista}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Motivación:} Las superficies reales exhiben apariencia dependiente de la vista (reflexiones especulares, materiales metálicos...).
+
+      \vspace{0.5em}
+      Los \textbf{Armónicos Esféricos} $Y_l^m$ forman una base ortonormal en la esfera $S^2$:
+      \[
+        c_{i,k}(\mathbf{d}) = \sum_{l=0}^{L}\sum_{m=-l}^{l} f_{i,k,l}^m \cdot Y_l^m(\mathbf{d})
+      \]
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Forma matricial:}
+      \[
+        \mathbf{c}_i(\mathbf{d}) = \mathbf{F}_i \cdot \mathbf{y}(\mathbf{d})
+      \]
+      Evaluación como polinomios eficiente en GPU.
+
+      \vspace{0.5em}
+      \begin{alertblock}{Entrenamiento progresivo}
+        Comienza con $L=0$ y desbloquea un grado cada 1000 iteraciones hasta $L=3$.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Grados de Armónicos Esféricos}
+  \centering
+  \begin{tabular}{cccc}
+    \toprule
+    \textbf{Grado $L$} & \textbf{Coef./canal} & \textbf{RGB total} & \textbf{Capacidad} \\
+    \midrule
+    0 & 1  & 3  & Difuso constante \\
+    1 & 4  & 12 & Sombreado lineal \\
+    2 & 9  & 27 & Especular cuadrático \\
+    3 & 16 & 48 & Especular agudo \textbf{(3DGS)} \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{1em}
+  \begin{tikzpicture}
+    \foreach \l/\label in {0/Difuso, 1/Lineal, 2/Cuadrático, 3/Especular} {
+      \node[draw=MidnightBlue, fill=MidnightBlue!\the\numexpr 10+\l*15\relax, rounded corners, minimum width=2.4cm, minimum height=0.7cm]
+        at (\l*2.8, 0) {\small $L=\l$: \label};
+    }
+    \draw[->, thick, accentorange] (0.5,0.4) -- (8.9,0.4)
+      node[midway, above] {\small mayor fidelidad visual};
+  \end{tikzpicture}
+\end{frame}

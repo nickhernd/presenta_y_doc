@@ -1,0 +1,59 @@
+\section{Factorización de la Covarianza}
+
+\begin{frame}{Factorización RS de la Covarianza}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Para garantizar $\boldsymbol{\Sigma}$ sea SPSD y optimizable:
+      \[
+        \boldsymbol{\Sigma} = \mathbf{R}\mathbf{S}\mathbf{S}^\top\mathbf{R}^\top
+      \]
+      \begin{itemize}
+        \item $\mathbf{R} \in SO(3)$: matriz de rotación
+        \item $\mathbf{S} = \mathrm{diag}(s_1, s_2, s_3)$, $s_k > 0$: escala
+      \end{itemize}
+      \vspace{0.5em}
+      \textbf{Garantía SPSD:}
+      \[
+        \mathbf{v}^\top\boldsymbol{\Sigma}\mathbf{v} = \|\mathbf{S}^\top\mathbf{R}^\top\mathbf{v}\|^2 \geq 0
+      \]
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{exampleblock}{Ventajas de la factorización}
+        \begin{itemize}
+          \item Optimización sin restricciones sobre $\mathbf{R}$ y $\mathbf{S}$
+          \item $\boldsymbol{\Sigma}$ siempre válida por construcción
+          \item Interpretación geométrica clara: rotación + escala de un elipsoide
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cuaterniones para la Rotación}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      La rotación se almacena como cuaternión unitario:
+      \[
+        \mathbf{q} = (q_w, q_x, q_y, q_z), \quad \|\mathbf{q}\| = 1
+      \]
+      \textbf{Ventajas sobre ángulos de Euler:}
+      \begin{itemize}
+        \item Solo 4 parámetros (vs 9 de la matriz)
+        \item Evita el \emph{gimbal lock}
+        \item Interpolación suave (SLERP)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Matriz de rotación inducida:}
+      \[
+        \mathbf{R} = \begin{pmatrix}
+          1-2(q_y^2+q_z^2) & 2(q_xq_y-q_wq_z) & 2(q_xq_z+q_wq_y)\\
+          2(q_xq_y+q_wq_z) & 1-2(q_x^2+q_z^2) & 2(q_yq_z-q_wq_x)\\
+          2(q_xq_z-q_wq_y) & 2(q_yq_z+q_wq_x) & 1-2(q_x^2+q_y^2)
+        \end{pmatrix}
+      \]
+      \vspace{0.3em}
+      \textit{Renormalizado tras cada paso de gradiente.}
+    \end{column}
+  \end{columns}
+\end{frame}

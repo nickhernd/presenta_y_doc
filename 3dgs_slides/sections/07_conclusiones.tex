@@ -1,0 +1,73 @@
+\section{Conclusiones}
+
+\begin{frame}{Resumen del Pipeline 3DGS}
+  \begin{tikzpicture}[node distance=0.6cm, every node/.style={font=\small}]
+    \node[draw=MidnightBlue, fill=MidnightBlue!15, rounded corners, minimum width=2.8cm, minimum height=0.75cm] (sfm)    at (0,0)   {SfM $\to$ nube de puntos};
+    \node[draw=MidnightBlue, fill=MidnightBlue!20, rounded corners, minimum width=2.8cm, minimum height=0.75cm] (init)   at (3.5,0)  {Inicialización Gaussianas};
+    \node[draw=MidnightBlue, fill=MidnightBlue!25, rounded corners, minimum width=2.8cm, minimum height=0.75cm] (raster) at (7,0)    {Proyección 2D + Raster.};
+    \node[draw=MidnightBlue, fill=MidnightBlue!30, rounded corners, minimum width=2.8cm, minimum height=0.75cm] (loss)   at (10.5,0) {$\mathcal{L}_1 + \mathcal{L}_\text{SSIM}$};
+    \node[draw=ForestGreen,  fill=ForestGreen!15,  rounded corners, minimum width=2.8cm, minimum height=0.75cm] (adam)   at (7,-1.5) {Adam + densificación};
+    \node[draw=accentorange, fill=accentorange!15, rounded corners, minimum width=2.8cm, minimum height=0.75cm] (out)    at (3.5,-1.5){Escena final $>$90 fps};
+
+    \draw[->, thick] (sfm)    -- (init);
+    \draw[->, thick] (init)   -- (raster);
+    \draw[->, thick] (raster) -- (loss);
+    \draw[->, thick] (loss)   -- (adam);
+    \draw[->, thick] (adam)   -- (out);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Contribuciones Principales}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Matemáticas clave:}
+      \begin{itemize}
+        \item Factorización $\boldsymbol{\Sigma} = \mathbf{RSS}^\top\mathbf{R}^\top$ con cuaterniones
+        \item Armónicos Esféricos $L=3$ para color dependiente de vista
+        \item Alpha blending discreto equivalente a NeRF
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Sistema de entrenamiento:}
+      \begin{itemize}
+        \item Pérdida combinada $\mathcal{L}_1 + \mathcal{L}_{\text{D-SSIM}}$
+        \item Control adaptativo de densidad (clonar/dividir/podar)
+        \item Reset periódico de opacidades
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{1em}
+  \begin{exampleblock}{Resultado}
+    3DGS logra calidad comparable a NeRF con renderizado en \textbf{tiempo real} y entrenamiento de \textbf{20--40 minutos}.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Trabajo Futuro y Limitaciones}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Limitaciones actuales:}
+      \begin{itemize}
+        \item Alto coste de memoria ($\sim$1 GB/escena)
+        \item Artefactos en regiones sin cobertura de cámara
+        \item Las secciones de proyección 2D y rasterización requieren mayor desarrollo
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Líneas de investigación:}
+      \begin{itemize}
+        \item Compresión de primitivas Gaussianas
+        \item Escenas dinámicas (4DGS)
+        \item Integración con LiDAR para mejor inicialización
+        \item Edición semántica de escenas 3DGS
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[standout]
+  \centering
+  \LARGE \textbf{¿Preguntas?}\\[1em]
+  \normalsize
+  Jaime Hernández · Yauheni Yatsevich\\
+  Universidad de Alicante, Marzo 2026
+\end{frame}
