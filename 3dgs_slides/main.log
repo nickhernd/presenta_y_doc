@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.28)  10 MAR 2026 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.28)  17 MAR 2026 08:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,6 +1067,14 @@ Package: ocgbase 2022/08/04 v0.22 support package for ocgx2.sty
 \@anim@curfield=\count376
 \@anim@@resizeflags=\count377
 )
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/multimedia.sty
+Package: multimedia 2012/05/02 ver 0.02
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+\mm@movie=\count378
+)
 (/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/pgfplotsthemeto
 l.sty
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
@@ -1074,24 +1082,24 @@ echnical note
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1129,16 +1137,16 @@ LaTeX Font Info:    ... okay on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count378
+\scratchcounter=\count379
 \scratchdimen=\dimen343
 \scratchbox=\box85
-\nofMPsegments=\count379
-\nofMParguments=\count380
+\nofMPsegments=\count380
+\nofMParguments=\count381
 \everyMPshowfont=\toks59
-\MPscratchCnt=\count381
+\MPscratchCnt=\count382
 \MPscratchDim=\dimen344
-\MPnumerator=\count382
-\makeMPintoPDFobject=\count383
+\MPnumerator=\count383
+\makeMPintoPDFobject=\count384
 \everyMPtoPDFconversion=\toks60
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1149,64 +1157,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 34.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 33.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 33.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 33.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 33.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 33.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 33.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 33.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 33.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 33.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 33.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 33.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 33.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 33.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 33.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 33.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 33.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 33.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 33.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 33.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 33.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 34.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 3
-3.
+4.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 3
-3.
+4.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 33.
+ut line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1236,32 +1244,32 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 (./main.nav)
-Overfull \vbox (39.39362pt too high) detected at line 40
+Overfull \vbox (39.39362pt too high) detected at line 41
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-99.
+100.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 100
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 100
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 99.
+ut line 100.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1272,592 +1280,592 @@ thkerncmss.
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3
 
 ]
-<images/gifs/compare_frames/frame-000.png, id=42, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-000.png, id=43, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-000.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-000.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-000.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-000.png> <a0,fr0>
-<images/gifs/compare_frames/frame-001.png, id=46, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-001.png, id=47, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-001.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-001.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-001.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-001.png> <a0,fr1>
-<images/gifs/compare_frames/frame-002.png, id=50, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-002.png, id=51, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-002.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-002.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-002.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-002.png> <a0,fr2>
-<images/gifs/compare_frames/frame-003.png, id=54, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-003.png, id=55, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-003.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-003.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-003.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-003.png> <a0,fr3>
-<images/gifs/compare_frames/frame-004.png, id=58, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-004.png, id=59, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-004.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-004.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-004.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-004.png> <a0,fr4>
-<images/gifs/compare_frames/frame-005.png, id=62, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-005.png, id=63, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-005.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-005.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-005.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-005.png> <a0,fr5>
-<images/gifs/compare_frames/frame-006.png, id=66, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-006.png, id=67, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-006.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-006.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-006.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-006.png> <a0,fr6>
-<images/gifs/compare_frames/frame-007.png, id=70, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-007.png, id=71, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-007.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-007.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-007.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-007.png> <a0,fr7>
-<images/gifs/compare_frames/frame-008.png, id=74, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-008.png, id=75, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-008.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-008.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-008.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-008.png>
 <a0,fr8>
-<images/gifs/compare_frames/frame-009.png, id=78, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-009.png, id=79, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-009.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-009.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-009.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-009.png> <a0,fr9>
-<images/gifs/compare_frames/frame-010.png, id=82, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-010.png, id=83, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-010.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-010.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-010.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-010.png> <a0,fr10>
-<images/gifs/compare_frames/frame-011.png, id=86, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-011.png, id=87, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-011.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-011.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-011.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-011.png> <a0,fr11>
-<images/gifs/compare_frames/frame-012.png, id=90, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-012.png, id=91, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-012.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-012.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-012.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-012.png> <a0,fr12>
-<images/gifs/compare_frames/frame-013.png, id=94, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-013.png, id=95, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-013.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-013.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-013.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-013.png> <a0,fr13>
-<images/gifs/compare_frames/frame-014.png, id=98, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-014.png, id=99, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-014.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-014.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-014.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-014.png> <a0,fr14>
-<images/gifs/compare_frames/frame-015.png, id=102, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-015.png, id=103, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-015.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-015.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-015.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-015.png> <a0,fr15>
-<images/gifs/compare_frames/frame-016.png, id=106, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-016.png, id=107, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-016.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-016.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-016.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-016.png> <a0,fr16>
-<images/gifs/compare_frames/frame-017.png, id=110, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-017.png, id=111, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-017.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-017.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-017.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-017.png> <a0,fr17>
-<images/gifs/compare_frames/frame-018.png, id=114, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-018.png, id=115, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-018.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-018.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-018.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-018.png>
 <a0,fr18>
-<images/gifs/compare_frames/frame-019.png, id=118, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-019.png, id=119, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-019.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-019.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-019.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-019.png> <a0,fr19>
-<images/gifs/compare_frames/frame-020.png, id=122, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-020.png, id=123, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-020.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-020.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-020.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-020.png> <a0,fr20>
-<images/gifs/compare_frames/frame-021.png, id=126, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-021.png, id=127, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-021.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-021.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-021.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-021.png> <a0,fr21>
-<images/gifs/compare_frames/frame-022.png, id=130, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-022.png, id=131, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-022.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-022.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-022.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-022.png> <a0,fr22>
-<images/gifs/compare_frames/frame-023.png, id=134, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-023.png, id=135, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-023.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-023.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-023.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-023.png> <a0,fr23>
-<images/gifs/compare_frames/frame-024.png, id=138, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-024.png, id=139, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-024.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-024.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-024.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-024.png> <a0,fr24>
-<images/gifs/compare_frames/frame-025.png, id=142, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-025.png, id=143, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-025.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-025.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-025.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-025.png> <a0,fr25>
-<images/gifs/compare_frames/frame-026.png, id=146, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-026.png, id=147, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-026.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-026.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-026.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-026.png> <a0,fr26>
-<images/gifs/compare_frames/frame-027.png, id=150, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-027.png, id=151, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-027.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-027.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-027.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-027.png> <a0,fr27>
-<images/gifs/compare_frames/frame-028.png, id=154, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-028.png, id=155, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-028.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-028.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-028.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-028.png>
 <a0,fr28>
-<images/gifs/compare_frames/frame-029.png, id=158, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-029.png, id=159, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-029.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-029.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-029.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-029.png> <a0,fr29>
-<images/gifs/compare_frames/frame-030.png, id=162, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-030.png, id=163, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-030.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-030.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-030.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-030.png> <a0,fr30>
-<images/gifs/compare_frames/frame-031.png, id=166, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-031.png, id=167, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-031.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-031.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-031.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-031.png> <a0,fr31>
-<images/gifs/compare_frames/frame-032.png, id=170, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-032.png, id=171, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-032.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-032.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-032.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-032.png> <a0,fr32>
-<images/gifs/compare_frames/frame-033.png, id=174, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-033.png, id=175, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-033.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-033.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-033.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-033.png> <a0,fr33>
-<images/gifs/compare_frames/frame-034.png, id=178, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-034.png, id=179, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-034.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-034.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-034.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-034.png> <a0,fr34>
-<images/gifs/compare_frames/frame-035.png, id=182, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-035.png, id=183, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-035.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-035.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-035.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-035.png> <a0,fr35>
-<images/gifs/compare_frames/frame-036.png, id=186, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-036.png, id=187, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-036.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-036.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-036.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-036.png> <a0,fr36>
-<images/gifs/compare_frames/frame-037.png, id=190, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-037.png, id=191, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-037.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-037.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-037.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-037.png> <a0,fr37>
-<images/gifs/compare_frames/frame-038.png, id=194, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-038.png, id=195, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-038.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-038.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-038.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-038.png>
 <a0,fr38>
-<images/gifs/compare_frames/frame-039.png, id=198, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-039.png, id=199, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-039.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-039.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-039.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-039.png> <a0,fr39>
-<images/gifs/compare_frames/frame-040.png, id=202, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-040.png, id=203, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-040.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-040.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-040.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-040.png> <a0,fr40>
-<images/gifs/compare_frames/frame-041.png, id=206, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-041.png, id=207, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-041.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-041.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-041.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-041.png> <a0,fr41>
-<images/gifs/compare_frames/frame-042.png, id=210, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-042.png, id=211, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-042.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-042.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-042.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-042.png> <a0,fr42>
-<images/gifs/compare_frames/frame-043.png, id=214, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-043.png, id=215, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-043.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-043.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-043.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-043.png> <a0,fr43>
-<images/gifs/compare_frames/frame-044.png, id=218, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-044.png, id=219, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-044.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-044.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-044.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-044.png> <a0,fr44>
-<images/gifs/compare_frames/frame-045.png, id=222, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-045.png, id=223, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-045.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-045.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-045.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-045.png> <a0,fr45>
-<images/gifs/compare_frames/frame-046.png, id=226, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-046.png, id=227, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-046.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-046.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-046.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-046.png> <a0,fr46>
-<images/gifs/compare_frames/frame-047.png, id=230, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-047.png, id=231, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-047.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-047.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-047.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-047.png> <a0,fr47>
-<images/gifs/compare_frames/frame-048.png, id=234, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-048.png, id=235, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-048.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-048.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-048.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-048.png>
 <a0,fr48>
-<images/gifs/compare_frames/frame-049.png, id=238, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-049.png, id=239, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-049.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-049.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-049.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-049.png> <a0,fr49>
-<images/gifs/compare_frames/frame-050.png, id=242, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-050.png, id=243, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-050.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-050.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-050.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-050.png> <a0,fr50>
-<images/gifs/compare_frames/frame-051.png, id=246, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-051.png, id=247, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-051.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-051.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-051.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-051.png> <a0,fr51>
-<images/gifs/compare_frames/frame-052.png, id=250, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-052.png, id=251, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-052.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-052.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-052.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-052.png> <a0,fr52>
-<images/gifs/compare_frames/frame-053.png, id=254, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-053.png, id=255, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-053.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-053.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-053.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-053.png> <a0,fr53>
-<images/gifs/compare_frames/frame-054.png, id=258, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-054.png, id=259, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-054.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-054.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-054.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-054.png> <a0,fr54>
-<images/gifs/compare_frames/frame-055.png, id=262, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-055.png, id=263, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-055.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-055.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-055.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-055.png> <a0,fr55>
-<images/gifs/compare_frames/frame-056.png, id=266, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-056.png, id=267, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-056.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-056.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-056.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-056.png> <a0,fr56>
-<images/gifs/compare_frames/frame-057.png, id=270, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-057.png, id=271, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-057.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-057.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-057.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-057.png> <a0,fr57>
-<images/gifs/compare_frames/frame-058.png, id=274, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-058.png, id=275, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-058.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-058.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-058.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-058.png>
 <a0,fr58>
-<images/gifs/compare_frames/frame-059.png, id=278, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-059.png, id=279, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-059.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-059.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-059.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-059.png> <a0,fr59>
-<images/gifs/compare_frames/frame-060.png, id=282, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-060.png, id=283, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-060.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-060.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-060.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-060.png> <a0,fr60>
-<images/gifs/compare_frames/frame-061.png, id=286, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-061.png, id=287, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-061.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-061.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-061.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-061.png> <a0,fr61>
-<images/gifs/compare_frames/frame-062.png, id=290, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-062.png, id=291, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-062.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-062.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-062.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-062.png> <a0,fr62>
-<images/gifs/compare_frames/frame-063.png, id=294, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-063.png, id=295, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-063.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-063.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-063.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-063.png> <a0,fr63>
-<images/gifs/compare_frames/frame-064.png, id=298, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-064.png, id=299, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-064.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-064.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-064.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-064.png> <a0,fr64>
-<images/gifs/compare_frames/frame-065.png, id=302, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-065.png, id=303, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-065.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-065.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-065.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-065.png> <a0,fr65>
-<images/gifs/compare_frames/frame-066.png, id=306, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-066.png, id=307, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-066.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-066.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-066.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-066.png> <a0,fr66>
-<images/gifs/compare_frames/frame-067.png, id=310, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-067.png, id=311, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-067.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-067.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-067.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-067.png> <a0,fr67>
-<images/gifs/compare_frames/frame-068.png, id=314, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-068.png, id=315, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-068.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-068.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-068.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-068.png>
 <a0,fr68>
-<images/gifs/compare_frames/frame-069.png, id=318, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-069.png, id=319, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-069.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-069.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-069.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-069.png> <a0,fr69>
-<images/gifs/compare_frames/frame-070.png, id=322, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-070.png, id=323, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-070.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-070.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-070.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-070.png> <a0,fr70>
-<images/gifs/compare_frames/frame-071.png, id=326, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-071.png, id=327, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-071.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-071.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-071.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-071.png> <a0,fr71>
-<images/gifs/compare_frames/frame-072.png, id=330, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-072.png, id=331, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-072.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-072.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-072.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-072.png> <a0,fr72>
-<images/gifs/compare_frames/frame-073.png, id=334, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-073.png, id=335, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-073.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-073.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-073.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-073.png> <a0,fr73>
-<images/gifs/compare_frames/frame-074.png, id=338, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-074.png, id=339, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-074.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-074.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-074.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-074.png> <a0,fr74>
-<images/gifs/compare_frames/frame-075.png, id=342, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-075.png, id=343, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-075.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-075.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-075.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-075.png> <a0,fr75>
-<images/gifs/compare_frames/frame-076.png, id=346, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-076.png, id=347, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-076.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-076.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-076.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-076.png> <a0,fr76>
-<images/gifs/compare_frames/frame-077.png, id=350, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-077.png, id=351, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-077.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-077.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-077.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-077.png> <a0,fr77>
-<images/gifs/compare_frames/frame-078.png, id=354, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-078.png, id=355, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-078.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-078.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-078.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-078.png>
 <a0,fr78>
-<images/gifs/compare_frames/frame-079.png, id=358, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-079.png, id=359, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-079.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-079.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-079.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-079.png> <a0,fr79>
-<images/gifs/compare_frames/frame-080.png, id=362, 803.0pt x 271.0125pt>
+<images/gifs/compare_frames/frame-080.png, id=363, 803.0pt x 271.0125pt>
 File: images/gifs/compare_frames/frame-080.png Graphic file (type png)
 <use images/gifs/compare_frames/frame-080.png>
 Package pdftex.def Info: images/gifs/compare_frames/frame-080.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 802.99805pt x 271.01183pt.
  <./images/gifs/compare_frames/frame-080.png> <a0,fr80> [4
 
 ]
-<images/3dgs_teaser.png, id=459, 357.7365pt x 81.906pt>
+<images/3dgs_teaser.png, id=460, 357.7365pt x 81.906pt>
 File: images/3dgs_teaser.png Graphic file (type png)
 <use images/3dgs_teaser.png>
-Package pdftex.def Info: images/3dgs_teaser.png  used on input line 216.
+Package pdftex.def Info: images/3dgs_teaser.png  used on input line 217.
 (pdftex.def)             Requested size: 366.47076pt x 83.90918pt.
  [5
 
  <./images/3dgs_teaser.png>]
-Overfull \hbox (109.6082pt too wide) in paragraph at lines 279--279
+Overfull \hbox (109.6082pt too wide) in paragraph at lines 280--280
 [][]  
  []
 
@@ -1868,470 +1876,470 @@ Overfull \hbox (109.6082pt too wide) in paragraph at lines 279--279
 ] [8
 
 ]
-<images/gifs/nodal_frames/frame-000.png, id=491, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-000.png, id=492, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-000.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-000.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-000.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-000.png> <a1,fr0>
-<images/gifs/nodal_frames/frame-001.png, id=495, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-001.png, id=496, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-001.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-001.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-001.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-001.png> <a1,fr1>
-<images/gifs/nodal_frames/frame-002.png, id=499, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-002.png, id=500, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-002.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-002.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-002.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-002.png> <a1,fr2>
-<images/gifs/nodal_frames/frame-003.png, id=503, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-003.png, id=504, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-003.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-003.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-003.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-003.png> <a1,fr3>
-<images/gifs/nodal_frames/frame-004.png, id=507, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-004.png, id=508, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-004.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-004.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-004.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-004.png> <a1,fr4>
-<images/gifs/nodal_frames/frame-005.png, id=511, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-005.png, id=512, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-005.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-005.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-005.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-005.png>
 <a1,fr5>
-<images/gifs/nodal_frames/frame-006.png, id=515, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-006.png, id=516, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-006.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-006.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-006.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-006.png> <a1,fr6>
-<images/gifs/nodal_frames/frame-007.png, id=519, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-007.png, id=520, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-007.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-007.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-007.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-007.png> <a1,fr7>
-<images/gifs/nodal_frames/frame-008.png, id=523, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-008.png, id=524, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-008.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-008.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-008.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-008.png>
 <a1,fr8>
-<images/gifs/nodal_frames/frame-009.png, id=527, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-009.png, id=528, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-009.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-009.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-009.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-009.png> <a1,fr9>
-<images/gifs/nodal_frames/frame-010.png, id=531, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-010.png, id=532, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-010.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-010.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-010.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-010.png> <a1,fr10>
-<images/gifs/nodal_frames/frame-011.png, id=535, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-011.png, id=536, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-011.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-011.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-011.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-011.png>
 <a1,fr11>
-<images/gifs/nodal_frames/frame-012.png, id=539, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-012.png, id=540, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-012.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-012.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-012.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-012.png> <a1,fr12>
-<images/gifs/nodal_frames/frame-013.png, id=543, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-013.png, id=544, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-013.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-013.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-013.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-013.png> <a1,fr13>
-<images/gifs/nodal_frames/frame-014.png, id=547, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-014.png, id=548, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-014.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-014.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-014.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-014.png> <a1,fr14>
-<images/gifs/nodal_frames/frame-015.png, id=551, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-015.png, id=552, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-015.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-015.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-015.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-015.png> <a1,fr15>
-<images/gifs/nodal_frames/frame-016.png, id=555, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-016.png, id=556, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-016.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-016.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-016.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-016.png> <a1,fr16>
-<images/gifs/nodal_frames/frame-017.png, id=559, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-017.png, id=560, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-017.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-017.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-017.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-017.png> <a1,fr17>
-<images/gifs/nodal_frames/frame-018.png, id=563, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-018.png, id=564, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-018.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-018.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-018.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-018.png> <a1,fr18>
-<images/gifs/nodal_frames/frame-019.png, id=567, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-019.png, id=568, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-019.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-019.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-019.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-019.png> <a1,fr19>
-<images/gifs/nodal_frames/frame-020.png, id=571, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-020.png, id=572, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-020.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-020.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-020.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-020.png> <a1,fr20>
-<images/gifs/nodal_frames/frame-021.png, id=575, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-021.png, id=576, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-021.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-021.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-021.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-021.png> <a1,fr21>
-<images/gifs/nodal_frames/frame-022.png, id=579, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-022.png, id=580, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-022.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-022.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-022.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-022.png> <a1,fr22>
-<images/gifs/nodal_frames/frame-023.png, id=583, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-023.png, id=584, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-023.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-023.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-023.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-023.png> <a1,fr23>
-<images/gifs/nodal_frames/frame-024.png, id=587, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-024.png, id=588, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-024.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-024.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-024.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-024.png> <a1,fr24>
-<images/gifs/nodal_frames/frame-025.png, id=591, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-025.png, id=592, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-025.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-025.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-025.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-025.png> <a1,fr25>
-<images/gifs/nodal_frames/frame-026.png, id=595, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-026.png, id=596, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-026.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-026.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-026.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-026.png> <a1,fr26>
-<images/gifs/nodal_frames/frame-027.png, id=599, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-027.png, id=600, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-027.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-027.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-027.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-027.png> <a1,fr27>
-<images/gifs/nodal_frames/frame-028.png, id=603, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-028.png, id=604, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-028.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-028.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-028.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-028.png> <a1,fr28>
-<images/gifs/nodal_frames/frame-029.png, id=607, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-029.png, id=608, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-029.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-029.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-029.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-029.png> <a1,fr29>
-<images/gifs/nodal_frames/frame-030.png, id=611, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-030.png, id=612, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-030.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-030.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-030.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-030.png> <a1,fr30>
-<images/gifs/nodal_frames/frame-031.png, id=615, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-031.png, id=616, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-031.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-031.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-031.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-031.png> <a1,fr31>
-<images/gifs/nodal_frames/frame-032.png, id=619, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-032.png, id=620, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-032.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-032.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-032.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-032.png> <a1,fr32>
-<images/gifs/nodal_frames/frame-033.png, id=623, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-033.png, id=624, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-033.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-033.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-033.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-033.png> <a1,fr33>
-<images/gifs/nodal_frames/frame-034.png, id=627, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-034.png, id=628, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-034.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-034.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-034.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-034.png> <a1,fr34>
-<images/gifs/nodal_frames/frame-035.png, id=631, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-035.png, id=632, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-035.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-035.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-035.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-035.png> <a1,fr35>
-<images/gifs/nodal_frames/frame-036.png, id=635, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-036.png, id=636, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-036.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-036.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-036.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-036.png> <a1,fr36>
-<images/gifs/nodal_frames/frame-037.png, id=639, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-037.png, id=640, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-037.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-037.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-037.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-037.png> <a1,fr37>
-<images/gifs/nodal_frames/frame-038.png, id=643, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-038.png, id=644, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-038.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-038.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-038.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-038.png> <a1,fr38>
-<images/gifs/nodal_frames/frame-039.png, id=647, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-039.png, id=648, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-039.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-039.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-039.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-039.png> <a1,fr39>
-<images/gifs/nodal_frames/frame-040.png, id=651, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-040.png, id=652, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-040.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-040.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-040.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-040.png> <a1,fr40>
-<images/gifs/nodal_frames/frame-041.png, id=655, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-041.png, id=656, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-041.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-041.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-041.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-041.png> <a1,fr41>
-<images/gifs/nodal_frames/frame-042.png, id=659, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-042.png, id=660, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-042.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-042.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-042.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-042.png> <a1,fr42>
-<images/gifs/nodal_frames/frame-043.png, id=663, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-043.png, id=664, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-043.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-043.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-043.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-043.png> <a1,fr43>
-<images/gifs/nodal_frames/frame-044.png, id=667, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-044.png, id=668, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-044.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-044.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-044.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-044.png> <a1,fr44>
-<images/gifs/nodal_frames/frame-045.png, id=671, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-045.png, id=672, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-045.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-045.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-045.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-045.png> <a1,fr45>
-<images/gifs/nodal_frames/frame-046.png, id=675, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-046.png, id=676, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-046.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-046.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-046.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-046.png> <a1,fr46>
-<images/gifs/nodal_frames/frame-047.png, id=679, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-047.png, id=680, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-047.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-047.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-047.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-047.png> <a1,fr47>
-<images/gifs/nodal_frames/frame-048.png, id=683, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-048.png, id=684, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-048.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-048.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-048.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-048.png> <a1,fr48>
-<images/gifs/nodal_frames/frame-049.png, id=687, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-049.png, id=688, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-049.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-049.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-049.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-049.png> <a1,fr49>
-<images/gifs/nodal_frames/frame-050.png, id=691, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-050.png, id=692, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-050.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-050.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-050.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-050.png> <a1,fr50>
-<images/gifs/nodal_frames/frame-051.png, id=695, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-051.png, id=696, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-051.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-051.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-051.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-051.png> <a1,fr51>
-<images/gifs/nodal_frames/frame-052.png, id=699, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-052.png, id=700, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-052.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-052.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-052.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-052.png> <a1,fr52>
-<images/gifs/nodal_frames/frame-053.png, id=703, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-053.png, id=704, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-053.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-053.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-053.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-053.png> <a1,fr53>
-<images/gifs/nodal_frames/frame-054.png, id=707, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-054.png, id=708, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-054.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-054.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-054.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-054.png> <a1,fr54>
-<images/gifs/nodal_frames/frame-055.png, id=711, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-055.png, id=712, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-055.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-055.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-055.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-055.png> <a1,fr55>
-<images/gifs/nodal_frames/frame-056.png, id=715, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-056.png, id=716, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-056.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-056.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-056.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-056.png> <a1,fr56>
-<images/gifs/nodal_frames/frame-057.png, id=719, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-057.png, id=720, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-057.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-057.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-057.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-057.png> <a1,fr57>
-<images/gifs/nodal_frames/frame-058.png, id=723, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-058.png, id=724, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-058.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-058.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-058.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-058.png> <a1,fr58>
-<images/gifs/nodal_frames/frame-059.png, id=727, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-059.png, id=728, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-059.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-059.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-059.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-059.png> <a1,fr59>
-<images/gifs/nodal_frames/frame-060.png, id=731, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-060.png, id=732, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-060.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-060.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-060.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-060.png> <a1,fr60>
-<images/gifs/nodal_frames/frame-061.png, id=735, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-061.png, id=736, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-061.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-061.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-061.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-061.png> <a1,fr61>
-<images/gifs/nodal_frames/frame-062.png, id=739, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-062.png, id=740, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-062.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-062.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-062.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-062.png> <a1,fr62>
-<images/gifs/nodal_frames/frame-063.png, id=743, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-063.png, id=744, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-063.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-063.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-063.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-063.png>
 <a1,fr63>
-<images/gifs/nodal_frames/frame-064.png, id=747, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-064.png, id=748, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-064.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-064.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-064.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-064.png> <a1,fr64>
-<images/gifs/nodal_frames/frame-065.png, id=751, 803.0pt x 300.12125pt>
+<images/gifs/nodal_frames/frame-065.png, id=752, 803.0pt x 300.12125pt>
 File: images/gifs/nodal_frames/frame-065.png Graphic file (type png)
 <use images/gifs/nodal_frames/frame-065.png>
 Package pdftex.def Info: images/gifs/nodal_frames/frame-065.png  used on input 
-line 439.
+line 440.
 (pdftex.def)             Requested size: 802.99805pt x 300.12051pt.
  <./images/gifs/nodal_frames/frame-065.png> <a1,fr65> [9
 
@@ -2339,18 +2347,18 @@ line 439.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 575.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 576.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 575.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 576.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 575.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 576.
 
  [11
 
 ]
-Overfull \hbox (17.81924pt too wide) in paragraph at lines 666--666
+Overfull \hbox (17.81924pt too wide) in paragraph at lines 667--667
 [][]  
  []
 
@@ -2358,14 +2366,31 @@ Overfull \hbox (17.81924pt too wide) in paragraph at lines 666--666
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 705.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 706.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 705.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 706.
 
  [13
 
 ] [14
+
+]
+Overfull \vbox (5.72893pt too high) detected at line 801
+ []
+
+[15
+
+] [16
+
+]
+File: images/3dgs_teaser.png Graphic file (type png)
+<use images/3dgs_teaser.png>
+Package pdftex.def Info: images/3dgs_teaser.png  used on input line 872.
+(pdftex.def)             Requested size: 326.64055pt x 74.78952pt.
+ [17
+
+] [18
 
 ]
 \tf@nav=\write6
@@ -2377,12 +2402,7 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-
-
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (12 not 14).
-               Rerun to correct this.
-
-(./main.aux)
+ (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2391,32 +2411,34 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 40986 strings out of 474222
- 1008978 string characters out of 5748733
+ 41223 strings out of 474222
+ 1013316 string characters out of 5748733
  1942975 words of memory out of 5000000
- 62486 multiletter control sequences out of 15000+600000
+ 62710 multiletter control sequences out of 15000+600000
  571693 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,1871b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0500.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfss0900.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx10
-00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb>
-Output written on main.pdf (14 pages, 9857466 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+si9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfss0500.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfss0900.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1000.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb>
+Output written on main.pdf (18 pages, 9882965 bytes).
 PDF statistics:
- 950 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
- 29 named destinations out of 1000 (max. 500000)
- 1685 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 992 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 1693 words of extra memory for PDF output out of 10000 (max. 10000000)
 

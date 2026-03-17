@@ -27,3 +27,10 @@
 \contentsline {subsection}{\numberline {6.3}Adaptive Density Control}{8}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Pruning}{8}{subsection.6.4}%
 \contentsline {subsection}{\numberline {6.5}Periodic Opacity Reset}{8}{subsection.6.5}%
+\contentsline {section}{\numberline {7}3D Gaussian Splatting for SLAM}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Simultaneous Localisation and Mapping}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Integration of 3DGS into the SLAM Pipeline}{9}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Notable 3DGS-SLAM Systems}{10}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Advantages and Open Challenges}{10}{subsection.7.4}%
+\contentsline {paragraph}{Advantages over classical SLAM representations.}{10}{section*.8}%
+\contentsline {paragraph}{Open challenges.}{10}{section*.9}%

@@ -72,8 +72,19 @@ end-to-end with adaptive density control (Section~\ref{sec:optimization}).
 NeRF's implicit representation handles smooth geometry naturally; 3DGS trades
 spatial continuity for hardware-accelerated rendering and explicit editability.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/3dgs_teaser.png}
+  \caption{Photo-realistic novel views synthesised with 3D Gaussian Splatting at
+           $>$90 fps on a consumer GPU. Each scene is reconstructed from a set of
+           posed photographs; the Gaussian map supports real-time rendering from
+           any viewpoint. Image from Kerbl et al.~\cite{kerbl2023gaussian}.}
+  \label{fig:teaser}
+\end{figure}
+
 \medskip
 The remainder of this document covers the mathematical foundations of 3DGS:
 geometric representation (Sections~\ref{sec:gaussian_repr}--\ref{sec:projection}),
 the rendering pipeline (Sections~\ref{sec:rasterization}--\ref{sec:alpha_blending}),
-and the optimisation strategy (Section~\ref{sec:optimization}).
+the optimisation strategy (Section~\ref{sec:optimization}), and the extension to
+SLAM (Section~\ref{sec:slam}).

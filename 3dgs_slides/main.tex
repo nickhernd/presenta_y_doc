@@ -12,6 +12,7 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{animate}
+\usepackage{multimedia}
 
 \pgfplotsset{compat=1.18}
 
@@ -25,7 +26,7 @@
 
 % --- Metadata ---
 \title{3D Gaussian Splatting}
-\subtitle{How computers learn to see the world in 3D}
+\subtitle{Real-time Rendering and SLAM}
 \author{Jaime Hernández \and Yauheni Yatsevich}
 \institute{Universidad de Alicante}
 \date{March 2026}
@@ -702,6 +703,172 @@ node[midway, above, font=\small, accentorange] {Rotate};
       \end{tikzpicture}
     \end{column}
   \end{columns}
+\end{frame}
+
+% ============================================================
+% SLAM SECTION — Introduction
+% ============================================================
+\begin{frame}{From Rendering to SLAM}
+  \begin{columns}[c]
+    \begin{column}{0.50\textwidth}
+      \textbf{SLAM} = \alert{Simultaneous Localisation and Mapping}
+
+      \vspace{0.6em}
+      A robot (or camera) must answer two questions \textbf{at the same time}:
+      \begin{enumerate}
+        \item \textbf{Where am I?} (localisation)
+        \item \textbf{What does the environment look like?} (mapping)
+      \end{enumerate}
+
+      \vspace{0.6em}
+      \begin{block}{Classic SLAM maps}
+        Point clouds · Occupancy grids · Meshes
+      \end{block}
+
+      \vspace{0.4em}
+      \begin{exampleblock}{3DGS SLAM maps}
+        Millions of coloured Gaussians — photorealistic \emph{and} real-time!
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.85, every node/.style={font=\small}]
+        % Robot path
+        \draw[gaussblue, thick, ->] (-2,-1.5) .. controls (-1,0) and (1,0.5) .. (2,1.5)
+          node[right] {robot path};
+        % Keyframes
+        \foreach \pt/\n in {(-2,-1.5)/1, (-0.5,0.1)/2, (1,0.8)/3, (2,1.5)/4}{
+          \fill[accentorange] \pt circle (3pt);
+          \node[above right, font=\tiny, accentorange] at \pt {kf\n};
+        }
+        % Gaussians scattered around
+        \foreach \cx/\cy/\rx/\ry/\col in {
+            -1.5/0.8/0.30/0.15/gaussblue,
+            0.5/-0.5/0.25/0.12/softgreen,
+            1.2/0.3/0.35/0.17/accentorange,
+            -0.3/1.2/0.28/0.14/gaussblue}{
+          \fill[\col!25, draw=\col, opacity=0.75] (\cx,\cy) ellipse (\rx cm and \ry cm);
+        }
+        \node[below, font=\tiny, gray] at (0,-2.0) {Live 3DGS map built on the fly};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% SLAM — How 3DGS enables SLAM
+% ============================================================
+\begin{frame}{3DGS-SLAM: Key Systems}
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      \textbf{How 3DGS integrates with SLAM:}
+
+      \vspace{0.5em}
+      \begin{tikzpicture}[scale=0.82, every node/.style={font=\small},
+                          box/.style={draw, rounded corners, minimum width=3.2cm,
+                                      minimum height=0.6cm, align=center}]
+        \node[box, fill=gaussblue!15, draw=gaussblue]  (cam) at (0,3.0) {RGB-D / monocular camera};
+        \node[box, fill=accentorange!15, draw=accentorange] (track) at (0,2.0) {Tracking (camera pose)};
+        \node[box, fill=softgreen!15, draw=softgreen]  (map)  at (0,1.0) {Gaussian Map update};
+        \node[box, fill=gaussblue!20, draw=gaussblue]  (ren)  at (0,0.0) {Real-time rendering};
+
+        \draw[->, thick] (cam)   -- (track);
+        \draw[->, thick] (track) -- (map);
+        \draw[->, thick] (map)   -- (ren);
+        \draw[->, thick, dashed, accentorange] (ren) to[bend left=50]
+          node[right, font=\tiny] {photometric loss} (track);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \textbf{Notable 3DGS-SLAM systems:}
+
+      \vspace{0.4em}
+      \begin{itemize}
+        \item \textbf{SplaTAM} (2024) — first real-time 3DGS SLAM\\
+              {\small RGB-D input, silhouette-guided densification}
+        \item \textbf{Gaussian-SLAM} — online scene reconstruction\\
+              {\small runs at $>$10 fps on a single GPU}
+        \item \textbf{MonoGaussian} — monocular camera only\\
+              {\small depth estimated from monocular cues}
+      \end{itemize}
+
+      \vspace{0.4em}
+      \begin{alertblock}{\centering Advantage over classic SLAM}
+        \centering The map is \textbf{photorealistic} — useful for AR, robotics, and loop closure.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% SLAM — Tracking with Gaussians
+% ============================================================
+\begin{frame}{Pose Estimation via Photometric Loss}
+  \centering
+  \textbf{Camera pose is found by minimising the difference between rendered and real frames}
+
+  \vspace{0.5em}
+  \begin{tikzpicture}[scale=0.92, every node/.style={font=\small}]
+    % Current 3DGS map
+    \node[draw=gaussblue, fill=gaussblue!10, rounded corners,
+          minimum width=3.0cm, minimum height=1.5cm] (map) at (-4.5, 0) {};
+    \node[font=\small, gaussblue] at (-4.5, 0.3) {Current};
+    \node[font=\small, gaussblue] at (-4.5,-0.1) {3DGS map};
+    % Gaussians inside
+    \fill[gaussblue!40, opacity=0.7] (-5.0,-0.3) ellipse (0.3cm and 0.15cm);
+    \fill[accentorange!40, opacity=0.7] (-4.2, 0.0) ellipse (0.25cm and 0.12cm);
+    \fill[softgreen!40, opacity=0.7] (-4.7, 0.3) ellipse (0.22cm and 0.10cm);
+
+    % Candidate pose
+    \node[draw=accentorange, fill=accentorange!10, rounded corners,
+          minimum width=2.2cm, minimum height=0.8cm] (pose) at (0, 1.5) {Candidate pose $T$};
+
+    % Rendered frame
+    \node[draw=softgreen, fill=softgreen!10, rounded corners,
+          minimum width=2.4cm, minimum height=1.4cm] (ren) at (3.5, 0.5) {};
+    \node[font=\small, softgreen] at (3.5, 0.8) {Rendered};
+    \node[font=\small, softgreen] at (3.5, 0.4) {frame};
+
+    % Real frame
+    \node[draw=accentorange, fill=accentorange!10, rounded corners,
+          minimum width=2.4cm, minimum height=1.4cm] (real) at (3.5,-1.3) {};
+    \node[font=\small, accentorange] at (3.5,-0.9) {Real};
+    \node[font=\small, accentorange] at (3.5,-1.3) {frame};
+
+    % Loss
+    \node[draw=red!60!black, fill=red!8, rounded corners,
+          minimum width=2.2cm, minimum height=0.7cm] (loss) at (7.5, -0.4) {$\mathcal{L}_\text{photo}$};
+
+    % Arrows
+    \draw[->, thick, gaussblue] (map)  -- node[above, font=\tiny]{render} (ren);
+    \draw[->, thick, accentorange] (pose) -- (ren);
+    \draw[->, thick] (ren)  -- (loss);
+    \draw[->, thick] (real) -- (loss);
+    \draw[->, thick, red!60!black, dashed] (loss) to[bend right=30]
+      node[below, font=\tiny]{gradient → update $T$} (pose);
+  \end{tikzpicture}
+
+  \vspace{0.3em}
+  \begin{exampleblock}{\centering Result}
+    \centering The pose $T$ is optimised iteratively — camera tracks the scene \textbf{and} the Gaussian map is updated online.
+  \end{exampleblock}
+\end{frame}
+
+% ============================================================
+% DEMO — Live 3DGS result
+% ============================================================
+\begin{frame}{Live Result: 3DGS in Action}
+  \centering
+  \textbf{Real scan reconstructed with 3D Gaussian Splatting}
+
+  \vspace{0.6em}
+  \movie[width=0.82\textwidth, height=0.55\textheight, autostart, loop,
+         poster, showcontrols]{%
+    \includegraphics[width=0.82\textwidth]{images/3dgs_teaser.png}%
+  }{video/3dgs_demo.mp4}
+
+  \vspace{0.4em}
+  {\small\color{gray} Click to play — requires Adobe Acrobat or a compatible PDF viewer}
 \end{frame}
 
 % ============================================================

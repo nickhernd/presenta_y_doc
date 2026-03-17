@@ -16,6 +16,10 @@
 \usepackage{mathtools}
 \usepackage{bm}
 
+%--- TikZ (used in SLAM section) ------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, shapes.geometric, positioning}
+
 %--- Graphics & Tables ----------------------------------------------------
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -109,7 +113,7 @@
   \vspace{3cm}
   \rule{\linewidth}{0.4pt}\\[0.4cm]
   {\Huge\bfseries 3D Gaussian Splatting\par}
-  {\Large Mathematical Foundations and Rendering Pipeline\par}
+  {\Large for Real-time Rendering and SLAM\par}
   \vspace{0.2cm}
   \rule{\linewidth}{0.4pt}\\[1cm]
   {\large\itshape A Comparative Study with Neural Radiance Fields\par}
@@ -136,6 +140,7 @@
 \input{sections/06_rasterization_pipeline}
 \input{sections/07_alpha_blending}
 \input{sections/08_optimization}
+\input{sections/09_slam}
 
 %==============================================================================
 % Bibliography

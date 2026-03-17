@@ -1,5 +1,13 @@
 \begin{thebibliography}{1}
 
+\bibitem{keetha2024splatam}
+Nikhil Keetha, Jay Karhade, Krishna~Murthy Jatavallabhula, Gengshan Yang,
+  Sebastian Scherer, Deva Ramanan, and Jonathon Luiten.
+\newblock {SplaTAM}: Splat, track \& map 3{D} {G}aussians for dense {RGB-D}
+  {SLAM}.
+\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2024.
+
 \bibitem{kerbl2023gaussian}
 Bernhard Kerbl, Georgios Kopanas, Thomas Leimk{\"u}hler, and George Drettakis.
 \newblock 3{D} {G}aussian {S}platting for real-time radiance field rendering.
@@ -12,11 +20,5 @@ Ben Mildenhall, Pratul~P. Srinivasan, Matthew Tancik, Jonathan~T. Barron, Ravi
   synthesis.
 \newblock In {\em European Conference on Computer Vision (ECCV)}, pages
   405--421. Springer, 2020.
-
-\bibitem{zwicker2001ewa}
-Matthias Zwicker, Hanspeter Pfister, Jeroen van Baar, and Markus Gross.
-\newblock {EWA} splatting.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
-  8(3):223--238, 2002.
 
 \end{thebibliography}
