@@ -1,0 +1,21 @@
+%==============================================================================
+% Section 14 -- Limitations
+%==============================================================================
+\section{Limitations: Dynamic Scenes, Compression, and Storage}
+\label{sec:limitations}
+
+Despite the real-time rendering and tracking advantages of 3DGS over NeRF, the explicit nature of Gaussian splatting introduces unique limitations regarding scene dynamics and long-term data storage.
+
+\paragraph{Handling Dynamic Scenes.} 
+Standard 3DGS-SLAM relies on a strict static-world assumption. When moving objects (e.g., pedestrians, vehicles, or moving shadows) enter the camera's view, the tracking thread registers high photometric error. The mapping thread responds by improperly spawning "floater" Gaussians in mid-air to satisfy the momentary view, resulting in persistent ghosting artefacts in the final map. 
+While some NeRF-SLAM systems handle dynamics by learning transient density fields, 3DGS must adopt explicit temporal modelling. Recent extensions, such as \textit{4D Gaussian Splatting (4DGS)} or \textit{Dynamic 3DGS}, address this by attaching a time-dependent velocity vector or a learned deformation field to each Gaussian primitive. However, integrating these 4D representations into a real-time SLAM pipeline remains computationally prohibitive and is an active area of research.
+
+\paragraph{Persistent Storage and Compression.} 
+While Section~\ref{sec:analysis}.2 discussed the runtime Video RAM (VRAM) bottleneck, the persistent storage (disk space) required to save a reconstructed Gaussian map is equally problematic. NeRF models can compress an entire scene into a few megabytes of neural network weights. In contrast, saving a 3DGS map involves serializing millions of primitives. A standard 3 million Gaussian scene requires approximately $700$ MB to $1$ GB of disk space in \texttt{float32} precision.
+
+To mitigate this, recent literature has proposed aggressive compression techniques for explicit volumetric representations:
+\begin{itemize}
+    \item \textbf{Vector Quantization (VQ):} Instead of storing unique Spherical Harmonic (SH) coefficients and covariance matrices for every Gaussian, primitives are clustered into a smaller "codebook" of shared properties.
+    \item \textbf{Attribute Pruning:} The highest-order SH bands (degrees $L=2$ and $L=3$) consume the vast majority of parameters. Selectively dropping these bands for Gaussians in textureless regions drastically reduces the file size without degrading perceived quality.
+    \item \textbf{Entropy Coding:} Sorting Gaussians spatially (e.g., via Morton coding) and applying standard lossless compression algorithms can reduce the storage footprint by over $50\%$, bringing the storage requirements closer to practical limits for mobile robotics.
+\end{itemize}

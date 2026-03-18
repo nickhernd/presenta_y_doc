@@ -1,0 +1,58 @@
+%==============================================================================
+% Section 14 -- Performance Analysis
+%==============================================================================
+\section{Performance Analysis: Latency, FPS, and VRAM Consumption}
+\label{sec:analysis}
+
+The fundamental architectural differences between NeRF (implicit, continuous) and 3DGS (explicit, discrete) manifest most prominently in their hardware utilization during SLAM operations. The choice between the two paradigms generally represents a trade-off between computational latency and memory consumption.
+
+\subsection{Computational Latency and FPS}
+NeRF-based SLAM systems, such as iMAP and NICE-SLAM, rely on volumetric ray marching. To render a single pixel for photometric loss calculation, the system must query a Multi-Layer Perceptron (MLP) or feature grid hundreds of times along a camera ray. This heavy computational burden restricts tracking and mapping speeds to typically $1$--$5$ Frames Per Second (FPS), and makes real-time novel view rendering ($>30$ FPS) nearly impossible without specialized hardware.
+
+In contrast, 3DGS-SLAM systems (e.g., SplaTAM~\cite{keetha2024splatam}, Gaussian-SLAM) bypass ray marching in favor of tile-based rasterization. Because projecting 3D ellipsoids onto a 2D plane is a highly parallelizable and native GPU operation, tracking and mapping can be performed at $10$--$30$ FPS. Furthermore, the decoupling of the mapping thread from the rendering thread allows 3DGS-SLAM to render the live reconstructed scene at $>90$ FPS, making it vastly superior for real-time AR/VR applications.
+
+\subsection{VRAM Consumption and Scalability}
+While 3DGS excels in compute speed, it suffers from a severe memory bottleneck. NeRFs encode the scene implicitly; the entire geometry and appearance of a room can be compressed into the weights of an MLP and a multi-resolution hash grid, often consuming less than $1$ GB of Video RAM (VRAM).
+
+Conversely, 3DGS requires explicit storage for every primitive. Each 3D Gaussian must store its position $\mu \in \mathbb{R}^3$, covariance matrix components (scale $s \in \mathbb{R}^3$ and rotation quaternion $q \in \mathbb{R}^4$), opacity $\alpha \in \mathbb{R}$, and Spherical Harmonic (SH) coefficients for view-dependent color. 
+A single high-fidelity indoor room can easily require $1$ to $3$ million Gaussians, consuming $2$--$6$ GB of VRAM. In large-scale trajectory mapping without aggressive pruning, the Gaussian count can explode, pushing VRAM consumption beyond $24$ GB and severely limiting the deployment of 3DGS-SLAM on resource-constrained embedded systems or mobile robots.
+
+\begin{table}[H]
+  \centering
+  \caption{Empirical Performance Trade-offs in Real-Time SLAM}
+  \label{tab:performance_comparison}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{l p{3.5cm} p{3.5cm}}
+    \toprule
+    \textbf{Metric} & \textbf{NeRF-SLAM} & \textbf{3DGS-SLAM} \\
+    \midrule
+    \textbf{Tracking \& Mapping Speed} & $1$ -- $5$ FPS & $10$ -- $30+$ FPS \\
+    \textbf{Rendering Speed} & $< 10$ FPS & $> 90$ FPS \\
+    \textbf{VRAM Footprint (Room Scale)} & $< 1$ GB & $2$ -- $6$ GB \\
+    \textbf{Primary Bottleneck} & Computational \newline (Compute Bound) & Memory \newline (Memory Bound) \\
+    \textbf{Mobile Suitability} & Moderate \newline (High Latency) & Poor \newline (High VRAM) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%------------------------------------------------------------------------------
+\subsection{SLAM Evaluation Metrics}
+
+To rigorously compare the performance of NeRF-based and 3DGS-SLAM systems, evaluations are typically divided into two distinct categories: tracking accuracy (localisation) and mapping fidelity (reconstruction).
+
+\paragraph{Tracking Accuracy.} 
+The precision of the estimated camera trajectory is evaluated against a known ground-truth trajectory using the \textbf{Absolute Trajectory Error (ATE)}. The ATE measures the global consistency of the estimated trajectory by first aligning it to the ground truth (usually via Horn's method) and then computing the Root Mean Square Error (RMSE) of the translational differences. Mathematically, for an estimated trajectory $T$ and ground truth $Q$, the ATE RMSE over $N$ frames is defined as:
+\begin{equation}
+    \text{ATE}_{\text{RMSE}} = \left( \frac{1}{N} \sum_{i=1}^{N} \bigl\| \text{trans}(Q_i^{-1} S T_i) \bigr\|^2 \right)^{1/2}
+\end{equation}
+where $S$ is the rigid alignment transformation.
+
+\paragraph{Mapping and Rendering Quality.} 
+Because both NeRF and 3DGS are inherently view-synthesis formulations, the quality of the reconstructed map is evaluated by freezing the map, rendering novel views from held-out ground-truth poses, and comparing the results to the actual captured images. The standard photometric metrics include:
+\begin{itemize}
+    \item \textbf{PSNR (Peak Signal-to-Noise Ratio):} Measures pixel-wise accuracy. Higher is better.
+    \item \textbf{SSIM (Structural Similarity Index):} Measures perceived changes in structural information, capturing high-frequency details. Higher is better (maximum is 1.0).
+    \item \textbf{LPIPS (Learned Perceptual Image Patch Similarity):} Evaluates deep-feature differences using a pre-trained network (like VGG), providing a metric that closely aligns with human visual perception. Lower is better.
+\end{itemize}
+
+While NeRF and 3DGS systems often achieve comparable ATE RMSE (typically in the range of $1$ to $5$ cm on standard datasets like Replica or TUM-RGBD), 3DGS systems generally edge out NeRFs in mapping metrics (PSNR, SSIM) due to the explicit representation preserving sharp high-frequency details better than continuous MLPs.

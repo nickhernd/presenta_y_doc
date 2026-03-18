@@ -68,6 +68,20 @@ A 3DGS-SLAM system alternates between two tightly coupled phases:
 \end{figure}
 
 %------------------------------------------------------------------------------
+\subsection{Keyframe Management and Memory Control}
+  Unlike offline 3DGS, which optimizes over a static set of images, 
+  3DGS-SLAM must manage a continuous stream of data. 
+  Processing every frame for mapping is computationally prohibitive; 
+  therefore, systems employ a \textbf{keyframing strategy}.
+\paragraph{Keyframe Selection.} A new frame $I_t$ is designated as a keyframe based on two primary heuristics:
+\begin{itemize}
+  \item \textbf{Geometric Displacement:} The camera has moved beyond a spatial threshold $\Delta \text{pos}$ or rotated beyond $\Delta \theta$ relative to the last keyframe.
+  \item \textbf{Photometric Overlap:} The current view is rendered using the existing map $\mathcal{G}$. If the intersection-over-union (IoU) of observed pixels or the structural similarity (SSIM) drops below a threshold, the scene is considered "new," triggering a keyframe.\end{itemize}
+\paragraph{Windowed Optimization.} To maintain real-time performance, mapping optimization is typically restricted to a \textbf{sliding window} of recent keyframes. To prevent global drift, some architectures—such as SplaTAM~\cite{keetha2024splatam}—periodically sample "global" keyframes from the entire trajectory history. 
+This ensures that the Gaussian parameters remain consistent with previously visited areas of the scene, effectively acting as a local bundle adjustment (BA) equivalent.
+
+
+%------------------------------------------------------------------------------
 \subsection{Notable 3DGS-SLAM Systems}
 
 \begin{table}[H]

@@ -1,0 +1,18 @@
+%==============================================================================
+% Section 12 -- Uncertainty and Initialization
+%==============================================================================
+\section{Loop Closure and Global Optimization}
+\label{sec:opti}
+
+%------------------------------------------------------------------------------
+As the camera traverses large environments, small errors in pose estimation (Eq.~\ref{eq:slam_tracking}) accumulate, leading to "drift" where the reconstructed map no longer aligns with reality upon revisiting a known location.
+\paragraph{Place Recognition.}
+Loop closure detection in 3DGS-SLAM typically leverages the photorealistic nature of the map. Systems compare the current live frame $I_t$ against a database of previous keyframes using global image descriptors (e.g., NetVLAD or DBoW2). If a high-similarity match is found, a loop candidate is identified.
+\paragraph{Global Bundle Adjustment (GBA).}
+Once a loop is detected, the system must perform a global correction. Unlike traditional SLAM, which only optimizes a pose graph, 3DGS-SLAM must adjust:
+\begin{itemize}
+    \item \textbf{Camera Poses:} Correcting the historical trajectory to close the geometric gap. 
+    \item \textbf{Gaussian Parameters:} Aligning the primitives $\{\mu_i, \Sigma_i\}$ to the new optimized poses. 
+\end{itemize}
+\paragraph{Sub-map Merging.}
+Advanced systems like \textit{Gaussian-SLAM} manage large-scale scenes by dividing the environment into independent sub-maps. When a loop is closed, these sub-maps are merged by performing a rigid transformation on the Gaussian collections to ensure seamless visual and geometric transitions.

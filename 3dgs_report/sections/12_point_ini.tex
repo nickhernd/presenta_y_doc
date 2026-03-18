@@ -1,0 +1,17 @@
+%==============================================================================
+% Section 12 -- Uncertainty and Initialization
+%==============================================================================
+\section{Uncertainty Management and Point Initialization}
+\label{sec:point_init}
+
+The transition from 2D observations to 3D Gaussian primitives requires robust initialization and filtering to maintain map integrity.
+
+\paragraph{Depth-Based Seeding.} 
+In RGB-D configurations, the initial position $\mu$ of a Gaussian is back-projected from the depth map $D_t$. The initial scale $s$ is typically set to:
+\begin{equation}
+    s_{init} = \lambda \cdot \frac{D_t(p)}{f},
+\end{equation}
+where $f$ is the focal length and $\lambda$ is a scaling factor to ensure initial coverage.
+
+\paragraph{Pruning and Densification.} 
+Uncertainty is managed through a "survive-of-the-fittest" approach. Gaussians are pruned if their opacity $\alpha$ falls below a threshold $\epsilon_{\alpha}$ or if their view-space position exhibits high variance over multiple frames. Conversely, in regions where the rendered silhouette $S(p)$ is near zero but an observation exists, new Gaussians are spawned to fill "holes" in the geometry.
