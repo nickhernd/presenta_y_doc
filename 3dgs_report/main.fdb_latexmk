@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1773814308.84577 "main.aux" "main.bbl" "main" 1773814309.85397 0
+["bibtex main"] 1773814308.84577 "main.aux" "main.bbl" "main" 1773923543.38338 0
   "./references.bib" 1773811479.17819 6038 ce577a979ee6351ce1d0f67d39388a3a ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1773814309.71408 13758 84b4ccd7d4a3007076e2c314d466daad "pdflatex"
+  "main.aux" 1773923543.24503 13758 84b4ccd7d4a3007076e2c314d466daad "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1773814308.86739 "/home/amikiry/Documentos/4_Year/VAR/presenta_y_doc/3dgs_report/main.tex" "main.pdf" "main" 1773814309.85417 0
+["pdflatex"] 1773923542.39468 "/home/amikiry/Documentos/4_Year/VAR/presenta_y_doc/3dgs_report/main.tex" "main.pdf" "main" 1773923543.38359 0
   "/etc/texmf/web2c/texmf.cnf" 1772016712.62221 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1773727505.80534 31928 3f66f720129af1186aa4c5005abf1a00 ""
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1773727504.72232 40112 71963cffc86d28c6c4d599dff545a56a ""
@@ -251,12 +251,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1773727374.05996 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1773727408 6852672 cdb6e91bbf1fc0b81af6c2aa1386f686 ""
   "figures/3dgs_teaser.png" 1773810458.54358 962879 4260b18814c24c1560251ba42b258fb2 ""
-  "main.aux" 1773814309.71408 13758 84b4ccd7d4a3007076e2c314d466daad "pdflatex"
+  "main.aux" 1773923543.24503 13758 84b4ccd7d4a3007076e2c314d466daad "pdflatex"
   "main.bbl" 1773814308.86106 961 8e2e0f7df84b6aba83a2ce41efd07187 "bibtex main"
-  "main.out" 1773814309.71608 8480 566b37a2711b456175497c4b235d6ab6 "pdflatex"
+  "main.out" 1773923543.24603 8480 566b37a2711b456175497c4b235d6ab6 "pdflatex"
   "main.tex" 1773814282.00044 5076 aa8d3e17437ebaab779464e5b6557dc1 ""
-  "main.toc" 1773814309.71608 4752 26360d8e8ecf95e3a4cec117bcd85431 "pdflatex"
-  "sections/01_introduction.tex" 1773810458.55058 4313 6aa5fba0257a2c2c2b2083802956c61d ""
+  "main.toc" 1773923543.24703 4752 26360d8e8ecf95e3a4cec117bcd85431 "pdflatex"
+  "sections/01_introduction.tex" 1773923542.20104 4279 1f48ec9b2fb6f0d29c5d62fdbe2148cf ""
   "sections/02_gaussian_representation.tex" 1773810458.55058 2089 6d893eb991048737c02109d559104688 ""
   "sections/03_covariance_factorization.tex" 1773810458.55058 1739 6b8180dede9fd6c263a97a69b313c50a ""
   "sections/04_spherical_harmonics.tex" 1773810458.55058 1989 aadcf60cda319b3810d253c641325a8c ""
