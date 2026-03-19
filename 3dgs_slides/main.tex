@@ -872,6 +872,108 @@ node[midway, above, font=\small, accentorange] {Rotate};
 \end{frame}
 
 % ============================================================
+% SLIDE 18 — SLAM Optimisations
+% ============================================================
+\begin{frame}{System Optimisations for Real-Time SLAM}
+  \begin{itemize}
+    \item \textbf{Memory \& Keyframing:}\\ Optimising the map at 60 FPS would crash the GPU. \alert{Solution:} The system selects \textbf{Keyframes} (when the camera moves significantly) and optimises a small "sliding window". Transparent or oversized Gaussians are aggressively pruned.
+    \vspace{0.5em}
+    \item \textbf{Smart Initialization:}\\ To prevent mid-air "floaters", new Gaussians are only spawned where the rendered silhouette detects a physical "hole" in the map.
+    \vspace{0.5em}
+    \item \textbf{Fixing Trajectory Drift:}\\ As the camera travels, tiny tracking errors accumulate. \alert{Solution:} Upon recognizing a visited area (\textbf{Loop Closure}), the system runs a \textbf{Global Bundle Adjustment} to realign historical poses and millions of Gaussian parameters simultaneously.
+  \end{itemize}
+\end{frame}
+
+% ============================================================
+% SLIDE 19 — Performance Trade-offs
+% ============================================================
+\begin{frame}{Performance Analysis: NeRF vs. 3DGS SLAM}
+  \begin{table}
+    \centering
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{l c c}
+      \toprule
+      \textbf{Metric} & \textbf{NeRF-SLAM} & \textbf{3DGS-SLAM} \\
+      \midrule
+      \textbf{Tracking \& Mapping} & 1 -- 5 FPS & 10 -- 30+ FPS \\
+      \textbf{Rendering Speed} & $< 10$ FPS & $> 90$ FPS \\
+      \textbf{VRAM (Room Scale)} & $< 1$ GB & 2 -- 6+ GB \\
+      \textbf{Primary Bottleneck} & Compute Bound & Memory Bound \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \vspace{0.5em}
+  \begin{itemize}
+    \item \textbf{NeRF:} Highly memory efficient, but too slow for real-time AR/VR.
+    \item \textbf{3DGS:} Unbeatable speed and visual quality, but severe memory bottleneck (can exceed 24 GB for large outdoor maps).
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Why is it so fast? Tile-Based Rasterisation}
+  NeRF is slow because it shoots a ray for every pixel and queries a heavy Neural Network hundreds of times along that ray (\textbf{Volumetric Ray Marching}).
+  
+  \vspace{1em}
+  3DGS skips the neural network entirely during rendering:
+  \begin{enumerate}
+    \item \textbf{Project:} It flattens the 3D ellipsoids onto the 2D screen (Splatting).
+    \item \textbf{Divide \& Sort:} It splits the screen into $16 \times 16$ pixel tiles and uses an ultra-fast GPU Radix Sort to order the Gaussians from front-to-back.
+    \item \textbf{Blend:} It rapidly blends the colours and opacities (Alpha-compositing).
+  \end{enumerate}
+  
+  \vspace{0.5em}
+  \centering \alert{$\Rightarrow$ This native GPU pipeline is why 3DGS achieves $>90$ FPS.}
+\end{frame}
+
+% ============================================================
+% SLIDE 20 — SLAM Evaluation Metrics
+% ============================================================
+\begin{frame}{How do we evaluate SLAM?}
+  \begin{itemize}
+    \item \textbf{Tracking Accuracy (Where am I?)}
+    \begin{itemize}
+      \item \textbf{ATE (Absolute Trajectory Error):} Measures the physical deviation (in cm) between the estimated camera path and the true ground-truth path.
+    \end{itemize}
+    \vspace{1em}
+    \item \textbf{Mapping Fidelity (What does the world look like?)}
+    \begin{itemize}
+      \item \textbf{PSNR \& SSIM:} Measure pixel-perfect accuracy and structural similarity of the rendered map against real photos.
+      \item \textbf{LPIPS:} Measures how accurate the map looks to \textit{human perception} using deep neural networks.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% ============================================================
+% SLIDE 21 — Limitations & Future Work
+% ============================================================
+\begin{frame}{Limitations \& Active Research}
+  \begin{itemize}
+    \item \textbf{Dynamic Scenes}\\ 3DGS assumes a static world. Moving people or cars leave "ghost" trails.
+    \begin{itemize}
+      \item \alert{Solution:} Emerging \textbf{4D Gaussian Splatting (4DGS)} adds time-dependent velocity to Gaussians.
+    \end{itemize}
+    \vspace{1em}
+    \item \textbf{Storage Footprint}\\ A single room can take $\sim$1 GB of disk space.
+    \begin{itemize}
+      \item \alert{Solution:} Aggressive compression techniques like \textbf{Vector Quantization}, \textbf{Attribute Pruning} (dropping high-order Spherical Harmonics), and \textbf{Entropy Coding} can reduce file sizes by over 50\%.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% ============================================================
+% SLIDE 22 — Conclusion
+% ============================================================
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \item \textbf{Paradigm Shift:}\\ 3DGS represents a fundamental shift from \alert{Compute-bound} (NeRF) to \alert{Memory-bound} SLAM.
+    \vspace{0.8em}
+    \item \textbf{Unification:}\\ It successfully unifies high-fidelity photorealistic reconstruction with real-time camera tracking ($>90$ FPS rendering).
+    \vspace{0.8em}
+    \item \textbf{The Verdict:}\\ 3DGS is the definitive future for interactive AR/VR and robotics, provided that upcoming research can solve its VRAM and dynamic scene limitations.
+  \end{itemize}
+\end{frame}
+
+% ============================================================
 % SLIDE FINAL — Q&A
 % ============================================================
 \begin{frame}[standout]

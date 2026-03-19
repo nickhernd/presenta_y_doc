@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1773814308.84577 "main.aux" "main.bbl" "main" 1773923543.38338 0
+["bibtex main"] 1773923870.61708 "main.aux" "main.bbl" "main" 1773924002.21904 0
   "./references.bib" 1773811479.17819 6038 ce577a979ee6351ce1d0f67d39388a3a ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1773923543.24503 13758 84b4ccd7d4a3007076e2c314d466daad "pdflatex"
+  "main.aux" 1773924002.0907 14123 3920a533e616fcde1d5796cccdef93b8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1773923542.39468 "/home/amikiry/Documentos/4_Year/VAR/presenta_y_doc/3dgs_report/main.tex" "main.pdf" "main" 1773923543.38359 0
+["pdflatex"] 1773924001.31479 "/home/amikiry/Documentos/4_Year/VAR/presenta_y_doc/3dgs_report/main.tex" "main.pdf" "main" 1773924002.21923 0
   "/etc/texmf/web2c/texmf.cnf" 1772016712.62221 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1773727505.80534 31928 3f66f720129af1186aa4c5005abf1a00 ""
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1773727504.72232 40112 71963cffc86d28c6c4d599dff545a56a ""
@@ -24,7 +24,7 @@
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk" 1773727506.14335 47440 949cbdc656dd9118dd5cf70e201fd62c ""
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk" 1773727503.68031 24132 6bb6acbfc512a93d05efbce077af88ca ""
   "/home/amikiry/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1773727503.98031 14040 57f508cc2c992e235fae5029d2f42961 ""
-  "/home/amikiry/Documentos/4_Year/VAR/presenta_y_doc/3dgs_report/main.tex" 1773814282.00044 5076 aa8d3e17437ebaab779464e5b6557dc1 ""
+  "/home/amikiry/Documentos/4_Year/VAR/presenta_y_doc/3dgs_report/main.tex" 1773923766.38751 5112 7e33ff58540581c1037d7f09fe0e2033 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -251,11 +251,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1773727374.05996 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1773727408 6852672 cdb6e91bbf1fc0b81af6c2aa1386f686 ""
   "figures/3dgs_teaser.png" 1773810458.54358 962879 4260b18814c24c1560251ba42b258fb2 ""
-  "main.aux" 1773923543.24503 13758 84b4ccd7d4a3007076e2c314d466daad "pdflatex"
-  "main.bbl" 1773814308.86106 961 8e2e0f7df84b6aba83a2ce41efd07187 "bibtex main"
-  "main.out" 1773923543.24603 8480 566b37a2711b456175497c4b235d6ab6 "pdflatex"
-  "main.tex" 1773814282.00044 5076 aa8d3e17437ebaab779464e5b6557dc1 ""
-  "main.toc" 1773923543.24703 4752 26360d8e8ecf95e3a4cec117bcd85431 "pdflatex"
+  "main.aux" 1773924002.0907 14123 3920a533e616fcde1d5796cccdef93b8 "pdflatex"
+  "main.bbl" 1773923870.63128 961 8e2e0f7df84b6aba83a2ce41efd07187 "bibtex main"
+  "main.out" 1773924002.0917 8699 9372516e3805d0eb7686653e174a323d "pdflatex"
+  "main.tex" 1773923766.38751 5112 7e33ff58540581c1037d7f09fe0e2033 ""
+  "main.toc" 1773924002.0917 4844 d064cb4733b1f7e2dedb3a7672beb196 "pdflatex"
   "sections/01_introduction.tex" 1773923542.20104 4279 1f48ec9b2fb6f0d29c5d62fdbe2148cf ""
   "sections/02_gaussian_representation.tex" 1773810458.55058 2089 6d893eb991048737c02109d559104688 ""
   "sections/03_covariance_factorization.tex" 1773810458.55058 1739 6b8180dede9fd6c263a97a69b313c50a ""
@@ -269,6 +269,7 @@
   "sections/13_optimization2.tex" 1773813903.09495 1679 4105febaf509ddf29da85b2ececb724c ""
   "sections/14_analysis.tex" 1773813968.24936 5682 8ffd8353e1e6093a63283107b24b40ea ""
   "sections/15_limitations.tex" 1773814307.80603 2843 d0385940f77a9ebef9089e243840c404 ""
+  "sections/16_conclusions.tex" 1773924001.17571 2816 3ee821949856b8c33dc559464dd8e13a ""
   (generated)
   "main.aux"
   "main.log"

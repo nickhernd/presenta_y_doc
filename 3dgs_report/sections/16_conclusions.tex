@@ -3,3 +3,31 @@
 %==============================================================================
 \section{Conclusions and Future Directions}
 \label{sec:conclusion}
+
+En este estudio comparativo, hemos analizado los fundamentos matemáticos y la integración en sistemas SLAM de 
+3D Gaussian Splatting (3DGS)~\cite{kerbl20233d} frente a Neural Radiance Fields (NeRF)~\cite{mildenhall2020nerf}. 
+La transición de representaciones implícitas y continuas (NeRF) a representaciones explícitas y discretas (3DGS) 
+marca un cambio de paradigma fundamental en los sistemas de percepción robótica, 
+trasladando el principal cuello de botella del hardware desde la capacidad de cómputo hacia el consumo de memoria.
+
+Por un lado, 3DGS ha demostrado ser abrumadoramente superior en términos de latencia y velocidad computacional. 
+Al reemplazar el costoso proceso de \textit{ray marching} volumétrico de NeRF por una rasterización de primitivas 
+explícitas acelerada por GPU, 3DGS logra velocidades de seguimiento y mapeo de 10 a más de 30 
+FPS~\cite{keetha2024splatam}, junto con un renderizado fotorrealista en tiempo real que supera los 90 FPS. 
+Además, su representación geométrica explícita preserva mejor los detalles de alta frecuencia en las métricas 
+de evaluación de mapas (como PSNR y SSIM). Estas características hacen de 3DGS la tecnología idónea para 
+aplicaciones interactivas como la realidad aumentada y virtual (AR/VR).
+
+Sin embargo, estas ventajas conllevan compromisos críticos. La naturaleza explícita de 3DGS sufre de un severo 
+consumo de memoria de video (VRAM) y espacio de almacenamiento persistente. Mientras que NeRF puede comprimir la
+ información de una escena entera en menos de 1 GB de VRAM gracias a los pesos de su red neuronal, 
+ 3DGS requiere instanciar millones de elipsoides, pudiendo sobrepasar rápidamente los 24 GB en mapeos de 
+ trayectorias a gran escala. Adicionalmente, la dependencia de 3DGS de un entorno estrictamente estático hace 
+ que la presencia de objetos dinámicos genere artefactos visuales, requiriendo el uso de complejas extensiones 
+ temporales como 4DGS que hoy en día resultan computacionalmente prohibitivas.
+
+En resumen, 3DGS-SLAM unifica la reconstrucción fotorrealista de alta fidelidad y el seguimiento de cámaras en 
+tiempo real, superando las barreras de latencia de las arquitecturas NeRF. El éxito y la adopción futura de 3DGS 
+en plataformas con recursos limitados (como robots móviles o sistemas integrados) dependerán de la investigación 
+activa en técnicas agresivas de compresión, como la cuantización vectorial, la poda de atributos y la codificación
+de entropía, así como de un modelado eficiente para escenas dinámicas.
