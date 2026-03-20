@@ -352,92 +352,6 @@ node[midway, above, font=\small, accentorange] {Rotate};
   \end{columns}
 \end{frame}
 
-% ============================================================
-% SLIDE 7 — Spherical Harmonics (visual only)
-% ============================================================
-\begin{frame}{Color that Changes with the Viewing Angle}
-  \begin{columns}[c]
-    \begin{column}{0.42\textwidth}
-      \textbf{Real surfaces look different depending on where you look from:}
-
-      \vspace{0.5em}
-      \begin{itemize}
-        \item A metallic ball has highlights
-        \item Glass reflects the environment
-        \item Wet surfaces are shiny from some angles
-      \end{itemize}
-
-      \vspace{0.5em}
-      \textbf{Spherical Harmonics} capture this effect — like a flexible
-      colour function on a sphere. Each blob stores \textbf{48 colour values}
-      that together encode how colour changes with direction.
-    \end{column}
-    \begin{column}{0.56\textwidth}
-      \centering
-      % Visual: increasing complexity of SH lobes
-      \begin{tikzpicture}[scale=0.85, node distance=0.4cm]
-        % L=0 (constant - just a colored disk)
-        \fill[gaussblue!40, draw=gaussblue, thick] (-4.5, 0) circle (0.65cm);
-        \node[below=0.75cm, font=\tiny, align=center] at (-4.5,0)
-          {$L=0$\\Constant};
-
-        % L=1 (directional - slightly distorted)
-        \fill[gaussblue!60, draw=gaussblue, thick]
-          (-2.5, 0) ellipse (0.85cm and 0.55cm);
-        \fill[gaussblue!20, draw=gaussblue, dashed]
-          (-2.5, 0) ellipse (0.5cm and 0.65cm);
-        \node[below=0.75cm, font=\tiny, align=center] at (-2.5,0)
-          {$L=1$\\Low shading};
-
-        % L=2 (quadratic - more lobes)
-        \fill[gaussblue!70, draw=gaussblue, thick]
-          (-0.5, 0) ellipse (0.9cm and 0.45cm);
-        \fill[gaussblue!30] (-0.5, 0.5) ellipse (0.3cm and 0.25cm);
-        \fill[gaussblue!30] (-0.5, -0.5) ellipse (0.3cm and 0.25cm);
-        \node[below=0.75cm, font=\tiny, align=center] at (-0.5,0)
-          {$L=2$\\Specular};
-
-        % L=3 (sharp - many lobes)
-        \fill[accentorange!70, draw=accentorange, very thick]
-          (1.5, 0) ellipse (0.9cm and 0.4cm);
-        \fill[accentorange!40] (1.5, 0.6) ellipse (0.28cm and 0.22cm);
-        \fill[accentorange!40] (1.5, -0.6) ellipse (0.28cm and 0.22cm);
-        \fill[accentorange!40] (2.25, 0.3) ellipse (0.22cm and 0.28cm);
-        \fill[accentorange!40] (0.75, -0.3) ellipse (0.22cm and 0.28cm);
-        \node[below=0.75cm, font=\tiny, align=center, accentorange] at (1.5,0)
-          {\textbf{$L=3$}\\Sharp specular};
-        \node[above=0.8cm, font=\tiny, accentorange] at (1.5,0) {← used in 3DGS};
-
-        % Arrow below
-        \draw[-{Stealth}, thick, gray]
-          (-5.2,-1.7) -- (2.7,-1.7)
-          node[midway, below=0.15cm, font=\tiny] {more detail, more params};
-      \end{tikzpicture}
-
-      \vspace{0.4em}
-      \begin{alertblock}{\centering Training trick}
-        \centering Start simple ($L=0$), unlock complexity every 1000 steps.
-      \end{alertblock}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-% ============================================================
-% SLIDE 7b — Spherical Harmonics: nodal lines
-% ============================================================
-\begin{frame}{Spherical Harmonics: Nodal Lines}
-  \centering
-  \textbf{Each degree adds more angular detail — the nodal lines show where color changes sign}
-
-  \vspace{0.5em}
-  \animategraphics[loop, autoplay, width=0.75\textwidth]{12}{images/gifs/nodal_frames/frame-}{000}{065}
-
-  \vspace{0.4em}
-  \begin{exampleblock}{\centering What you see}
-    \centering The lobes grow and rotate as higher SH degrees are added —
-    exactly how 3DGS encodes view-dependent color per Gaussian.
-  \end{exampleblock}
-\end{frame}
 
 % ============================================================
 % SLIDE 8 — Rendering: Splatting
@@ -665,46 +579,6 @@ node[midway, above, font=\small, accentorange] {Rotate};
     \end{column}
   \end{columns}
 \end{frame}
-
-% ============================================================
-% SLIDE 11 — Limitations & Future
-% ============================================================
-\begin{frame}{Where It Struggles \& Where It's Going}
-  \begin{columns}[c]
-    \begin{column}{0.5\textwidth}
-      \textbf{Current limitations:}
-
-      \vspace{0.5em}
-      \begin{tikzpicture}[scale=0.85, every node/.style={font=\small}]
-        \foreach \i/\ico/\desc in {
-            0/{$\approx$1 GB}/{High memory per scene},
-            1/{$\times$}/{Bad if camera coverage is sparse},
-            2/{$\sim$}/{Harder to edit semantically}}{
-          \node[draw=red!50!black, fill=red!5, rounded corners,
-                minimum width=5.5cm, minimum height=0.65cm, align=left]
-            at (0,{-\i*0.85}) {\textbf{\ico}\ \desc};
-        }
-      \end{tikzpicture}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \textbf{Exciting future directions:}
-
-      \vspace{0.5em}
-      \begin{tikzpicture}[scale=0.85, every node/.style={font=\small}]
-        \foreach \i/\desc in {
-            0/{4DGS — Dynamic scenes \& video},
-            1/{Compressed Gaussians — smaller files},
-            2/{LiDAR init — better accuracy},
-            3/{Semantic editing — "change the chair"}}{
-          \node[draw=softgreen, fill=softgreen!8, rounded corners,
-                minimum width=5.5cm, minimum height=0.65cm, align=left]
-            at (0,{-\i*0.85}) {$\rightarrow$ \desc};
-        }
-      \end{tikzpicture}
-    \end{column}
-  \end{columns}
-\end{frame}
-
 % ============================================================
 % SLAM SECTION — Introduction
 % ============================================================
