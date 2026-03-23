@@ -1,9 +1,12 @@
 \begin{thebibliography}{1}
 
 \bibitem{keetha2024splatam}
-Nikhil Keetha, Jay Karhade, Krishna~Murthy Jatavallabhula, Gengshan Yang, Sebastian Scherer, Deva Ramanan, and Jonathon Luiten.
-\newblock {SplaTAM}: Splat, track \& map 3{D} {G}aussians for dense {RGB-D} {SLAM}.
-\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2024.
+Nikhil Keetha, Jay Karhade, Krishna~Murthy Jatavallabhula, Gengshan Yang,
+  Sebastian Scherer, Deva Ramanan, and Jonathon Luiten.
+\newblock {SplaTAM}: Splat, track \& map 3{D} {G}aussians for dense {RGB-D}
+  {SLAM}.
+\newblock In {\em IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2024.
 
 \bibitem{kerbl2023gaussian}
 Bernhard Kerbl, Georgios Kopanas, Thomas Leimk{\"u}hler, and George Drettakis.
@@ -11,8 +14,11 @@ Bernhard Kerbl, Georgios Kopanas, Thomas Leimk{\"u}hler, and George Drettakis.
 \newblock In {\em ACM SIGGRAPH 2023 Conference Proceedings}. ACM, 2023.
 
 \bibitem{mildenhall2020nerf}
-Ben Mildenhall, Pratul~P. Srinivasan, Matthew Tancik, Jonathan~T. Barron, Ravi Ramamoorthi, and Ren Ng.
-\newblock {NeRF}: Representing scenes as neural radiance fields for view synthesis.
-\newblock In {\em European Conference on Computer Vision (ECCV)}, pages 405--421. Springer, 2020.
+Ben Mildenhall, Pratul~P. Srinivasan, Matthew Tancik, Jonathan~T. Barron, Ravi
+  Ramamoorthi, and Ren Ng.
+\newblock {NeRF}: Representing scenes as neural radiance fields for view
+  synthesis.
+\newblock In {\em European Conference on Computer Vision (ECCV)}, pages
+  405--421. Springer, 2020.
 
 \end{thebibliography}

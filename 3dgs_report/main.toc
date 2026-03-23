@@ -53,4 +53,3 @@
 \contentsline {section}{\numberline {11}Limitations: Dynamic Scenes, Compression, and Storage}{15}{section.11}%
 \contentsline {paragraph}{Handling Dynamic Scenes.}{15}{section*.20}%
 \contentsline {paragraph}{Persistent Storage and Compression.}{15}{section*.21}%
-\contentsline {section}{\numberline {12}Conclusions and Future Directions}{16}{section.12}%
